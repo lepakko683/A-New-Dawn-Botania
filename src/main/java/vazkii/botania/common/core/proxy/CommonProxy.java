@@ -35,7 +35,6 @@ import vazkii.botania.common.block.subtile.generating.SubTileNarslimmus;
 import vazkii.botania.common.block.tile.corporea.TileCorporeaIndex;
 import vazkii.botania.common.brew.ModBrews;
 import vazkii.botania.common.brew.ModPotions;
-import vazkii.botania.common.core.command.CommandDownloadLatest;
 import vazkii.botania.common.core.command.CommandOpen;
 import vazkii.botania.common.core.command.CommandShare;
 import vazkii.botania.common.core.command.CommandSkyblockSpread;
@@ -159,7 +158,6 @@ public class CommonProxy {
 	}
 
 	public void serverStarting(FMLServerStartingEvent event) {
-		event.registerServerCommand(new CommandDownloadLatest());
 		event.registerServerCommand(new CommandShare());
 		event.registerServerCommand(new CommandOpen());
 		if(Botania.gardenOfGlassLoaded)
