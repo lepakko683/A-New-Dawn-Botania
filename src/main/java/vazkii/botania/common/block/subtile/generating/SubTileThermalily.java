@@ -75,7 +75,7 @@ public class SubTileThermalily extends SubTileHydroangeas {
 
 	@Override
 	public int getCooldown() {
-		return 8400;
+		return 0;
 	}
 
 }

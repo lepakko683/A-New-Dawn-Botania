@@ -27,6 +27,7 @@ import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import org.lwjgl.opengl.GL11;
 
 import vazkii.botania.api.item.IBaubleRender;
+import vazkii.botania.api.mana.IManaUsingItem;
 import vazkii.botania.client.lib.LibResources;
 import vazkii.botania.common.lib.LibItemNames;
 import baubles.api.BaubleType;
@@ -36,7 +37,7 @@ import cpw.mods.fml.common.gameevent.PlayerEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemTravelBelt extends ItemBauble implements IBaubleRender, IManaUsingItem {
+public class ItemTravelBelt extends ItemBauble implements IBaubleRender {
 
 	private static final ResourceLocation texture = new ResourceLocation(LibResources.MODEL_TRAVEL_BELT);
 	@SideOnly(Side.CLIENT)
@@ -97,7 +98,7 @@ public class ItemTravelBelt extends ItemBauble implements IBaubleRender, IManaUs
 			EntityPlayer player = (EntityPlayer) event.entityLiving;
 			ItemStack belt = PlayerHandler.getPlayerBaubles(player).getStackInSlot(3);
 
-			if(belt != null && belt.getItem() instanceof ItemTravelBelt && ManaItemHandler.requestManaExact(belt, player, COST, false)) {
+			if(belt != null && belt.getItem() instanceof ItemTravelBelt) {
 				player.motionY += ((ItemTravelBelt) belt.getItem()).jump;
 				player.fallDistance = -((ItemTravelBelt) belt.getItem()).fallBuffer;
 			}
