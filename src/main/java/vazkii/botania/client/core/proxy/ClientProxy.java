@@ -144,7 +144,6 @@ import vazkii.botania.common.block.tile.string.TileRedString;
 import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.core.helper.Vector3;
 import vazkii.botania.common.core.proxy.CommonProxy;
-import vazkii.botania.common.core.version.VersionChecker;
 import vazkii.botania.common.entity.EntityBabylonWeapon;
 import vazkii.botania.common.entity.EntityCorporeaSpark;
 import vazkii.botania.common.entity.EntityDoppleganger;
@@ -199,8 +198,6 @@ public class ClientProxy extends CommonProxy {
 		MinecraftForge.EVENT_BUS.register(new MultiblockRenderHandler());
 		FMLCommonHandler.instance().bus().register(new CorporeaAutoCompleteHandler());
 
-		if(ConfigHandler.versionCheckEnabled)
-			new VersionChecker().init();
 
 		// Jingle bells jingle bells
 		Calendar calendar = Calendar.getInstance();
