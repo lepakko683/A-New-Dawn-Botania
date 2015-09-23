@@ -581,12 +581,12 @@ public class EntityDoppleganger extends EntityCreature implements IBotaniaBossWi
 
 					setTPDelay(getTPDelay() - 1);
 					if(getTPDelay() == 0 && getHealth() > 0) {
-						int tries = 0;
+						/*int tries = 0;
 						while(!teleportRandomly() && tries < 50)
 							tries++;
 						if(tries >= 50)
 							teleportTo(source.posX + 0.5, source.posY + 1.6, source.posZ + 0.5);
-
+*/
 						if(spawnLandmines)
 							for(int i = 0; i < 6; i++) {
 								int x = source.posX - 10 + rand.nextInt(20);
@@ -638,7 +638,7 @@ public class EntityDoppleganger extends EntityCreature implements IBotaniaBossWi
 
 	// EntityEnderman code below ============================================================================
 
-	protected boolean teleportRandomly() {
+/*	protected boolean teleportRandomly() {
 		double d0 = posX + (rand.nextDouble() - 0.5D) * 64.0D;
 		double d1 = posY + (rand.nextInt(64) - 32);
 		double d2 = posZ + (rand.nextDouble() - 0.5D) * 64.0D;
@@ -705,7 +705,7 @@ public class EntityDoppleganger extends EntityCreature implements IBotaniaBossWi
 			playSound("mob.endermen.portal", 1.0F, 1.0F);
 			return true;
 		}
-	}
+	}*/
 
 	@Override
 	@SideOnly(Side.CLIENT)
