@@ -161,6 +161,7 @@ import vazkii.botania.common.block.tile.string.TileRedStringDispenser;
 import vazkii.botania.common.block.tile.string.TileRedStringFertilizer;
 import vazkii.botania.common.block.tile.string.TileRedStringInterceptor;
 import vazkii.botania.common.block.tile.string.TileRedStringRelay;
+import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.item.ModItems;
 import vazkii.botania.common.lib.LibBlockNames;
 import vazkii.botania.common.lib.LibOreDict;
@@ -337,8 +338,19 @@ public final class ModBlocks {
 		bifrostPerm = new BlockBifrostPerm();
 		cellBlock = new BlockCell();
 		redStringInterceptor = new BlockRedStringInterceptor();
-		
-		ModFluffBlocks.init();
+
+
+            ModFluffBlocks.init();
+        if(ConfigHandler.stairsEnabled){
+            ModFluffBlocks.initStairs();
+        }
+        if(ConfigHandler.slabsEnabled){
+            ModFluffBlocks.initSlabs();
+        }
+        if(ConfigHandler.wallsEnabled){
+            ModFluffBlocks.initWalls();
+        }
+
 
 		for(int i = 0; i < 16; i++)
 			OreDictionary.registerOre(LibOreDict.FLOWER[i], new ItemStack(flower, 1, i));

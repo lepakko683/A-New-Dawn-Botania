@@ -82,7 +82,11 @@ public final class ConfigHandler {
 	public static int potionIDAllure = 95;
 	public static int potionIDClear = 96;
 
-	public static void loadConfig(File configFile) {
+    public static boolean stairsEnabled = true;
+    public static boolean slabsEnabled = true;
+    public static boolean wallsEnabled = true;
+
+    public static void loadConfig(File configFile) {
 		config = new Configuration(configFile);
 
 		config.load();
@@ -210,6 +214,15 @@ public final class ConfigHandler {
 
 		desc = "The quantity of Botania mushrooms to generate underground, in the world, defaults to 40, the lower the number the less patches generate.";
 		mushroomQuantity = loadPropInt("worldgen.mushroom.quantity", desc, mushroomQuantity);
+
+        desc = "Set this to false to disable all stairs";
+        stairsEnabled = loadPropBool("stairs.enabled", desc, stairsEnabled);
+
+        desc = "Set this to false to disable all slabs";
+        slabsEnabled = loadPropBool("slabs.enabled", desc, slabsEnabled);
+
+        desc = "Set this to false to disable all walls";
+        wallsEnabled = loadPropBool("walls.enabled", desc, wallsEnabled);
 
 		potionIDSoulCross = loadPropPotionId(LibPotionNames.SOUL_CROSS, potionIDSoulCross);
 		potionIDFeatherfeet = loadPropPotionId(LibPotionNames.FEATHER_FEET, potionIDFeatherfeet);
