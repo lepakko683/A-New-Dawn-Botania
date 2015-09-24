@@ -1,4 +1,4 @@
-![](https://github.com/Vazkii/Botania/blob/master/web/img/logo.png)  
+![](https://raw.githubusercontent.com/kotasc3/Botania-A-New-Dawn/dev/src/main/resources/assets/botania/textures/logo.png)
 
 Fork of Botania that removes all of Vazkii's nerfs!
 
