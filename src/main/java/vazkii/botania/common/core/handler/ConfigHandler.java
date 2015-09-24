@@ -87,6 +87,9 @@ public final class ConfigHandler {
     public static boolean wallsEnabled = true;
     public static boolean minMaxEnabled = false;
     public static boolean warningEnabled = true;
+    public static int endoflameFuelCap = -1;
+    public static int thermalilyCooldown = 0;
+    public static int hydroangeaCooldown = 0;
 
     public static void loadConfig(File configFile) {
 		config = new Configuration(configFile);
@@ -232,7 +235,17 @@ public final class ConfigHandler {
         desc = "Set this to false to disable warning when entering a world";
         warningEnabled = loadPropBool("warning.enabled", desc, warningEnabled);
 
-		potionIDSoulCross = loadPropPotionId(LibPotionNames.SOUL_CROSS, potionIDSoulCross);
+        desc = "Change the value of this to set the maximum burnTime in ticks for the endoflame, leave at -1 to disable";
+        endoflameFuelCap = loadPropInt("endoflame.fuelcap", desc, endoflameFuelCap);
+
+        desc = "Change the value of this to set the cooldown in ticks for the thermalily, leave at 0 to disable";
+        thermalilyCooldown = loadPropInt("thermalily.cooldown", desc, thermalilyCooldown);
+
+        desc = "Change the value of this to set the cooldown in ticks for the thermalily, leave at 0 to disable";
+        hydroangeaCooldown = loadPropInt("hydroangea.cooldown", desc, hydroangeaCooldown);
+
+
+        potionIDSoulCross = loadPropPotionId(LibPotionNames.SOUL_CROSS, potionIDSoulCross);
 		potionIDFeatherfeet = loadPropPotionId(LibPotionNames.FEATHER_FEET, potionIDFeatherfeet);
 		potionIDEmptiness = loadPropPotionId(LibPotionNames.EMPTINESS, potionIDEmptiness);
 		potionIDBloodthirst = loadPropPotionId(LibPotionNames.BLOODTHIRST, potionIDBloodthirst);

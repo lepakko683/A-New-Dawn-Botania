@@ -22,11 +22,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.ForgeDirection;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.ISubTileContainer;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.common.Botania;
+import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.core.helper.ItemNBTHelper;
 import vazkii.botania.common.lexicon.LexiconData;
 import vazkii.botania.common.lib.LibMisc;
@@ -38,7 +40,8 @@ public class SubTileHydroangeas extends SubTilePassiveGenerating {
 
 	private static final int[][] OFFSETS = { { 0, 1 }, { 0, -1 }, { 1, 0 }, { -1, 0 }, { -1, 1 }, { -1, -1 }, { 1, 1 }, { 1, -1 } };
 
-	int burnTime, cooldown;
+	int burnTime;
+    int cooldown = ConfigHandler.hydroangeaCooldown;
 
 	@Override
 	public void onUpdate() {
@@ -204,7 +207,7 @@ public class SubTileHydroangeas extends SubTilePassiveGenerating {
 	}
 
 	public int getCooldown() {
-		return 0;
+		return ConfigHandler.hydroangeaCooldown;
 	}
 
 }

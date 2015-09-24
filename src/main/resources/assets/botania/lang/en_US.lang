@@ -315,6 +315,15 @@ worldgen.flower.density=Worldgen Flower Density
 worldgen.flower.quantity=Worldgen Flower Quantity
 worldgen.mushroom.quantity=Worldgen Mushroom Quantity
 
+stairs.enabled=Enable Stairs
+slabs.enabled=Enable Slabs
+walls.enabled=Enable Walls
+minmax.enabled=Enable MinMax Mode
+warning.enable=Enable In Game Warning
+endoflame.fuelcap=Endoflame Max Fuel Burn Time
+thermalily.cooldown=Thermalily Cooldown
+hydroangea.cooldown=Hydroangea Cooldown
+
 # VERSION CHECKING
 botania.versioning.flavour0=NANI SORE!? BOTANIA IS OUTDATED!?
 botania.versioning.flavour1=What do you mean Botania is outdated, you ignorant fool?

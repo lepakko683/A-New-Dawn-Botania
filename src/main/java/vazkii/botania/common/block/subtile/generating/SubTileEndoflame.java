@@ -23,12 +23,13 @@ import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileGenerating;
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.block.ModBlocks;
+import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.lexicon.LexiconData;
 
 public class SubTileEndoflame extends SubTileGenerating {
 
 	private static final String TAG_BURN_TIME = "burnTime";
-	private static final int FUEL_CAP = 16000;
+	private static final int FUEL_CAP = ConfigHandler.endoflameFuelCap;
 	private static final int RANGE = 3;
 
 	int burnTime = 0;
@@ -51,7 +52,12 @@ public class SubTileEndoflame extends SubTileGenerating {
 
 							int burnTime = stack == null || stack.getItem() == Item.getItemFromBlock(ModBlocks.spreader) ? 0 : TileEntityFurnace.getItemBurnTime(stack);
 							if(burnTime > 0 && stack.stackSize > 0) {
-								this.burnTime = Math.min(FUEL_CAP, burnTime) / 2;
+                                if(FUEL_CAP == -1) {
+                                    this.burnTime = burnTime /2;
+                                }
+                                else{
+                                    this.burnTime = Math.min(FUEL_CAP, burnTime) / 2;
+                                }
 
 								stack.stackSize--;
 								supertile.getWorldObj().playSoundEffect(supertile.xCoord, supertile.yCoord, supertile.zCoord, "botania:endoflame", 0.2F, 1F);
