@@ -12,7 +12,6 @@ package vazkii.botania.api.boss;
 
 import java.awt.Rectangle;
 
-import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.util.ResourceLocation;
 import cpw.mods.fml.relauncher.Side;
@@ -58,5 +57,5 @@ public interface IBotaniaBoss extends IBossDisplayData {
 	 * here if needed.
 	 */
 	@SideOnly(Side.CLIENT)
-	public void bossBarRenderCallback(ScaledResolution res, int x, int y);
+	public void bossBarRenderCallback();
 }
