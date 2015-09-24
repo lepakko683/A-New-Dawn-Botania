@@ -66,6 +66,7 @@ public final class BaubleRenderHandler {
 		if(helm != null && helm.getItem() instanceof ItemTerrasteelHelm)
 			ItemTerrasteelHelm.renderOnPlayer(helm, event);
 
+		ContributorFancinessHandler.render(event);
 		GL11.glPopMatrix();
 	}
 
