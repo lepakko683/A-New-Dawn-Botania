@@ -10,6 +10,7 @@
  */
 package vazkii.botania.common.core.proxy;
 
+import cpw.mods.fml.common.gameevent.PlayerEvent;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -27,6 +28,7 @@ import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.lexicon.ITwoNamedPage;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.lexicon.LexiconPage;
+import vazkii.botania.client.core.handler.PlayerWarningHandler;
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.achievement.ModAchievements;
 import vazkii.botania.common.block.ModBlocks;
@@ -106,6 +108,9 @@ public class CommonProxy {
 
 		LexiconData.init();
 
+        if(ConfigHandler.warningEnabled) {
+            FMLCommonHandler.instance().bus().register(new PlayerWarningHandler());
+        }
 		if(Botania.gardenOfGlassLoaded)
 			new WorldTypeSkyblock();
 	}

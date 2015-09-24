@@ -86,6 +86,7 @@ public final class ConfigHandler {
     public static boolean slabsEnabled = true;
     public static boolean wallsEnabled = true;
     public static boolean minMaxEnabled = false;
+    public static boolean warningEnabled = true;
 
     public static void loadConfig(File configFile) {
 		config = new Configuration(configFile);
@@ -227,6 +228,9 @@ public final class ConfigHandler {
 
         desc = "Set this to true to enable min/max mode(Showing of mana numbers in gui/wand rightclick)";
         minMaxEnabled = loadPropBool("minmax.enabled", desc, minMaxEnabled);
+
+        desc = "Set this to false to disable warning when entering a world";
+        warningEnabled = loadPropBool("warning.enabled", desc, warningEnabled);
 
 		potionIDSoulCross = loadPropPotionId(LibPotionNames.SOUL_CROSS, potionIDSoulCross);
 		potionIDFeatherfeet = loadPropPotionId(LibPotionNames.FEATHER_FEET, potionIDFeatherfeet);
