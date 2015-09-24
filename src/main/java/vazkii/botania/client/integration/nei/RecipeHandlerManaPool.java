@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
@@ -23,6 +24,7 @@ import codechicken.lib.gui.GuiDraw;
 import codechicken.nei.NEIServerUtils;
 import codechicken.nei.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;
+import vazkii.botania.common.core.handler.ConfigHandler;
 
 public class RecipeHandlerManaPool extends TemplateRecipeHandler {
 
@@ -116,6 +118,10 @@ public class RecipeHandlerManaPool extends TemplateRecipeHandler {
 		GuiDraw.drawTexturedModalRect(45, 20, 38, 35, 92, 50);
 		HUDHandler.renderManaBar(32, 80, 0x0000FF, 0.75F, ((CachedManaPoolRecipe) arecipes.get(recipe)).mana, TilePool.MAX_MANA / 10);
 		RenderTilePool.forceMana = true;
+        Minecraft mc = Minecraft.getMinecraft();
+        if(ConfigHandler.minMaxEnabled) {
+            mc.fontRenderer.drawString(String.valueOf(((CachedManaPoolRecipe) arecipes.get(recipe)).mana) + " Mana Required", 32, 90, 0x3434D3);
+        }
 	}
 
 	@Override

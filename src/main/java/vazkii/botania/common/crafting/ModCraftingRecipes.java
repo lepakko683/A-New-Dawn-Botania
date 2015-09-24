@@ -879,7 +879,7 @@ public final class ModCraftingRecipes {
 				'Q', "gemQuartz",
 				'C', new ItemStack(Blocks.double_plant, 1, 5)));
 		recipesLavenderQuartz = BotaniaAPI.getLatestAddedRecipes(4);
-		addQuartzRecipes(3, null, ModFluffBlocks.lavenderQuartz, ModFluffBlocks.lavenderQuartzStairs, ModFluffBlocks.lavenderQuartzSlab);
+        addQuartzRecipes(3, null, ModFluffBlocks.lavenderQuartz, ModFluffBlocks.lavenderQuartzStairs, ModFluffBlocks.lavenderQuartzSlab);
 
 		recipeRedQuartz = addQuartzRecipes(4, Items.redstone, ModFluffBlocks.redQuartz, ModFluffBlocks.redQuartzStairs, ModFluffBlocks.redQuartzSlab);
 		addQuartzRecipes(5, null, ModFluffBlocks.elfQuartz, ModFluffBlocks.elfQuartzStairs, ModFluffBlocks.elfQuartzSlab);
@@ -2043,53 +2043,92 @@ public final class ModCraftingRecipes {
 		}
 
 		// Slab & Stair Recipes
-		addStairsAndSlabs(ModBlocks.livingwood, 0, ModFluffBlocks.livingwoodStairs, ModFluffBlocks.livingwoodSlab);
-		addStairsAndSlabs(ModBlocks.livingwood, 1, ModFluffBlocks.livingwoodPlankStairs, ModFluffBlocks.livingwoodPlankSlab);
-		addStairsAndSlabs(ModBlocks.livingrock, 0, ModFluffBlocks.livingrockStairs, ModFluffBlocks.livingrockSlab);
-		addStairsAndSlabs(ModBlocks.livingrock, 1, ModFluffBlocks.livingrockBrickStairs, ModFluffBlocks.livingrockBrickSlab);
-		addStairsAndSlabs(ModBlocks.dreamwood, 0, ModFluffBlocks.dreamwoodStairs, ModFluffBlocks.dreamwoodSlab);
-		addStairsAndSlabs(ModBlocks.dreamwood, 1, ModFluffBlocks.dreamwoodPlankStairs, ModFluffBlocks.dreamwoodPlankSlab);
-		addStairsAndSlabs(ModBlocks.prismarine, 0, ModFluffBlocks.prismarineStairs, ModFluffBlocks.prismarineSlab);
-		addStairsAndSlabs(ModBlocks.prismarine, 1, ModFluffBlocks.prismarineBrickStairs, ModFluffBlocks.prismarineBrickSlab);
-		addStairsAndSlabs(ModBlocks.prismarine, 2, ModFluffBlocks.darkPrismarineStairs, ModFluffBlocks.darkPrismarineSlab);
-		addStairsAndSlabs(ModBlocks.reedBlock, 0, ModFluffBlocks.reedStairs, ModFluffBlocks.reedSlab);
-		addStairsAndSlabs(ModBlocks.thatch, 0, ModFluffBlocks.thatchStairs, ModFluffBlocks.thatchSlab);
-		addStairsAndSlabs(ModBlocks.customBrick, 0, ModFluffBlocks.netherBrickStairs, ModFluffBlocks.netherBrickSlab);
-		addStairsAndSlabs(ModBlocks.customBrick, 1, ModFluffBlocks.soulBrickStairs, ModFluffBlocks.soulBrickSlab);
-		addStairsAndSlabs(ModBlocks.customBrick, 2, ModFluffBlocks.snowBrickStairs, ModFluffBlocks.snowBrickSlab);
-		addStairsAndSlabs(ModBlocks.customBrick, 3, ModFluffBlocks.tileStairs, ModFluffBlocks.tileSlab);
-		addStairsAndSlabs(ModBlocks.endStoneBrick, 0, ModFluffBlocks.endStoneStairs, ModFluffBlocks.endStoneSlab);
-
+        if(ConfigHandler.stairsEnabled) {
+            addStairs(ModBlocks.livingwood, 0, ModFluffBlocks.livingwoodStairs);
+            addStairs(ModBlocks.livingwood, 1, ModFluffBlocks.livingwoodPlankStairs);
+            addStairs(ModBlocks.livingrock, 0, ModFluffBlocks.livingrockStairs);
+            addStairs(ModBlocks.livingrock, 1, ModFluffBlocks.livingrockBrickStairs);
+            addStairs(ModBlocks.dreamwood, 0, ModFluffBlocks.dreamwoodStairs);
+            addStairs(ModBlocks.dreamwood, 1, ModFluffBlocks.dreamwoodPlankStairs);
+            addStairs(ModBlocks.prismarine, 0, ModFluffBlocks.prismarineStairs);
+            addStairs(ModBlocks.prismarine, 1, ModFluffBlocks.prismarineBrickStairs);
+            addStairs(ModBlocks.prismarine, 2, ModFluffBlocks.darkPrismarineStairs);
+            addStairs(ModBlocks.reedBlock, 0, ModFluffBlocks.reedStairs);
+            addStairs(ModBlocks.thatch, 0, ModFluffBlocks.thatchStairs);
+            addStairs(ModBlocks.customBrick, 0, ModFluffBlocks.netherBrickStairs);
+            addStairs(ModBlocks.customBrick, 1, ModFluffBlocks.soulBrickStairs);
+            addStairs(ModBlocks.customBrick, 2, ModFluffBlocks.snowBrickStairs);
+            addStairs(ModBlocks.customBrick, 3, ModFluffBlocks.tileStairs);
+            addStairs(ModBlocks.endStoneBrick, 0, ModFluffBlocks.endStoneStairs);
+        }
+        if(ConfigHandler.slabsEnabled) {
+            addSlabs(ModBlocks.livingwood, 0, ModFluffBlocks.livingwoodSlab);
+            addSlabs(ModBlocks.livingwood, 1, ModFluffBlocks.livingwoodPlankSlab);
+            addSlabs(ModBlocks.livingrock, 0, ModFluffBlocks.livingrockSlab);
+            addSlabs(ModBlocks.livingrock, 1, ModFluffBlocks.livingrockBrickSlab);
+            addSlabs(ModBlocks.dreamwood, 0, ModFluffBlocks.dreamwoodSlab);
+            addSlabs(ModBlocks.dreamwood, 1, ModFluffBlocks.dreamwoodPlankSlab);
+            addSlabs(ModBlocks.prismarine, 0, ModFluffBlocks.prismarineSlab);
+            addSlabs(ModBlocks.prismarine, 1, ModFluffBlocks.prismarineBrickSlab);
+            addSlabs(ModBlocks.prismarine, 2, ModFluffBlocks.darkPrismarineSlab);
+            addSlabs(ModBlocks.reedBlock, 0, ModFluffBlocks.reedSlab);
+            addSlabs(ModBlocks.thatch, 0, ModFluffBlocks.thatchSlab);
+            addSlabs(ModBlocks.customBrick, 0, ModFluffBlocks.netherBrickSlab);
+            addSlabs(ModBlocks.customBrick, 1, ModFluffBlocks.soulBrickSlab);
+            addSlabs(ModBlocks.customBrick, 2, ModFluffBlocks.snowBrickSlab);
+            addSlabs(ModBlocks.customBrick, 3, ModFluffBlocks.tileSlab);
+            addSlabs(ModBlocks.endStoneBrick, 0, ModFluffBlocks.endStoneSlab);
+        }
 		// Wall Recipes
-		addWall(ModBlocks.livingrock, 0, ModFluffBlocks.livingrockWall, 0);
-		addWall(ModBlocks.livingwood, 0, ModFluffBlocks.livingwoodWall, 0);
-		addWall(ModBlocks.dreamwood, 0, ModFluffBlocks.dreamwoodWall, 0);
-		addWall(ModBlocks.prismarine, 0, ModFluffBlocks.prismarineWall, 0);
-		addWall(ModBlocks.reedBlock, 0, ModFluffBlocks.reedWall, 0);
-		for(int i = 0; i < 8; i++)
-			addWall(ModFluffBlocks.biomeStoneA, i + 8, ModFluffBlocks.biomeStoneWall, i);
-		for(int i = 0; i < 4; i++)
-			addWall(ModFluffBlocks.stone, i, ModFluffBlocks.stoneWall, i);
-
+        if(ConfigHandler.wallsEnabled) {
+            addWall(ModBlocks.livingrock, 0, ModFluffBlocks.livingrockWall, 0);
+            addWall(ModBlocks.livingwood, 0, ModFluffBlocks.livingwoodWall, 0);
+            addWall(ModBlocks.dreamwood, 0, ModFluffBlocks.dreamwoodWall, 0);
+            addWall(ModBlocks.prismarine, 0, ModFluffBlocks.prismarineWall, 0);
+            addWall(ModBlocks.reedBlock, 0, ModFluffBlocks.reedWall, 0);
+            for (int i = 0; i < 8; i++)
+                addWall(ModFluffBlocks.biomeStoneA, i + 8, ModFluffBlocks.biomeStoneWall, i);
+            for (int i = 0; i < 4; i++)
+                addWall(ModFluffBlocks.stone, i, ModFluffBlocks.stoneWall, i);
+        }
 		// Biome Stone Recipes
 		for(int i = 0; i < 8; i++) {
 			GameRegistry.addSmelting(new ItemStack(ModFluffBlocks.biomeStoneA, 1, i + 8), new ItemStack(ModFluffBlocks.biomeStoneA, 1, i), 0.1F);
 			GameRegistry.addRecipe(new ItemStack(ModFluffBlocks.biomeStoneB, 4, i), "SS", "SS", 'S', new ItemStack(ModFluffBlocks.biomeStoneA, 1, i));
 			GameRegistry.addRecipe(new ItemStack(ModFluffBlocks.biomeStoneB, 1, i + 8), "S", "S", 'S', new ItemStack(ModFluffBlocks.biomeStoneSlabs[i + 16]));
-			addStairsAndSlabs(ModFluffBlocks.biomeStoneA, i, ModFluffBlocks.biomeStoneStairs[i], ModFluffBlocks.biomeStoneSlabs[i]);
-			addStairsAndSlabs(ModFluffBlocks.biomeStoneA, i + 8, ModFluffBlocks.biomeStoneStairs[i + 8], ModFluffBlocks.biomeStoneSlabs[i + 8]);
-			addStairsAndSlabs(ModFluffBlocks.biomeStoneB, i, ModFluffBlocks.biomeStoneStairs[i + 16], ModFluffBlocks.biomeStoneSlabs[i + 16]);
+            if(ConfigHandler.stairsEnabled) {
+                addStairs(ModFluffBlocks.biomeStoneA, i, ModFluffBlocks.biomeStoneStairs[i]);
+                addStairs(ModFluffBlocks.biomeStoneA, i + 8, ModFluffBlocks.biomeStoneStairs[i + 8]);
+                addStairs(ModFluffBlocks.biomeStoneB, i, ModFluffBlocks.biomeStoneStairs[i + 16]);
+            }
+            if(ConfigHandler.slabsEnabled) {
+                addSlabs(ModFluffBlocks.biomeStoneA, i, ModFluffBlocks.biomeStoneSlabs[i]);
+                addSlabs(ModFluffBlocks.biomeStoneA, i + 8, ModFluffBlocks.biomeStoneSlabs[i + 8]);
+                addSlabs(ModFluffBlocks.biomeStoneB, i, ModFluffBlocks.biomeStoneSlabs[i + 16]);
+            }
 		}
 
 		// 1.8 Block Stone Stairs & Slabs
 		for(int i = 0; i < 4; i++) {
-			addStairsAndSlabs(ModFluffBlocks.stone, i, ModFluffBlocks.stoneStairs[i], ModFluffBlocks.stoneSlabs[i]);
-			addStairsAndSlabs(ModFluffBlocks.stone, i + 8, ModFluffBlocks.stoneStairs[i + 4], ModFluffBlocks.stoneSlabs[i + 4]);
+            if(ConfigHandler.stairsEnabled) {
+                addStairs(ModFluffBlocks.stone, i, ModFluffBlocks.stoneStairs[i]);
+                addStairs(ModFluffBlocks.stone, i + 8, ModFluffBlocks.stoneStairs[i + 4]);
+            }
+            if(ConfigHandler.slabsEnabled) {
+                addSlabs(ModFluffBlocks.stone, i,ModFluffBlocks.stoneSlabs[i]);
+                addSlabs(ModFluffBlocks.stone, i + 8,ModFluffBlocks.stoneSlabs[i + 4]);
+            }
 		}
 
 		// Pavement Stairsm & Stairs
-		for(int i = 0; i < 4; i++)
-			addStairsAndSlabs(ModFluffBlocks.pavement, i, ModFluffBlocks.pavementStairs[i], ModFluffBlocks.pavementSlabs[i]);
+		for(int i = 0; i < 4; i++) {
+            if (ConfigHandler.stairsEnabled) {
+                addStairs(ModFluffBlocks.pavement, i, ModFluffBlocks.pavementStairs[i]);
+            }
+            if (ConfigHandler.slabsEnabled) {
+                addSlabs(ModFluffBlocks.pavement, i, ModFluffBlocks.pavementSlabs[i]);
+            }
+        }
 		
 		// Misc Recipes
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.reeds, 9, 0), new ItemStack(ModBlocks.reedBlock));
@@ -2134,25 +2173,35 @@ public final class ModCraftingRecipes {
 		recipeEndPortal = BotaniaAPI.getLatestAddedRecipe();
 	}
 
-	private static void addStairsAndSlabs(Block block, int meta, Block stairs, Block slab) {
-		GameRegistry.addRecipe(new ItemStack(slab, 6),
-				"QQQ",
-				'Q', new ItemStack(block, 1, meta));
-		GameRegistry.addRecipe(new ItemStack(stairs, 4),
-				"  Q", " QQ", "QQQ",
-				'Q', new ItemStack(block, 1, meta));
-		GameRegistry.addRecipe(new ItemStack(stairs, 4),
-				"Q  ", "QQ ", "QQQ",
-				'Q', new ItemStack(block, 1, meta));
-		GameRegistry.addRecipe(new ItemStack(block, 1, meta),
-				"Q", "Q",
-				'Q', new ItemStack(slab));
+
+	private static void addStairs(Block block, int meta, Block stairs) {
+        if(ConfigHandler.stairsEnabled) {
+            GameRegistry.addRecipe(new ItemStack(stairs, 4),
+                    "  Q", " QQ", "QQQ",
+                    'Q', new ItemStack(block, 1, meta));
+            GameRegistry.addRecipe(new ItemStack(stairs, 4),
+                    "Q  ", "QQ ", "QQQ",
+                    'Q', new ItemStack(block, 1, meta));
+        }
+
 	}
+    private static void addSlabs(Block block, int meta, Block slab){
+        if(ConfigHandler.slabsEnabled) {
+            GameRegistry.addRecipe(new ItemStack(slab, 6),
+                    "QQQ",
+                    'Q', new ItemStack(block, 1, meta));
+            GameRegistry.addRecipe(new ItemStack(block, 1, meta),
+                    "Q", "Q",
+                    'Q', new ItemStack(slab));
+        }
+    }
 
 	private static void addWall(Block block, int blockMeta, Block wall, int wallMeta) {
-		GameRegistry.addRecipe(new ItemStack(wall, 6, wallMeta),
-				"BBB", "BBB",
-				'B', new ItemStack(block, 1, blockMeta));
+        if(ConfigHandler.wallsEnabled) {
+            GameRegistry.addRecipe(new ItemStack(wall, 6, wallMeta),
+                    "BBB", "BBB",
+                    'B', new ItemStack(block, 1, blockMeta));
+        }
 	}
 
 	private static IRecipe addQuartzRecipes(int meta, Item req, Block block, Block stairs, Block slab) {
@@ -2160,12 +2209,18 @@ public final class ModCraftingRecipes {
 				"QQ", "QQ",
 				'Q', new ItemStack(ModItems.quartz, 1, meta));
 		GameRegistry.addRecipe(new ItemStack(block, 2, 2),
-				"Q", "Q",
-				'Q', block);
+                "Q", "Q",
+                'Q', block);
+        if(ConfigHandler.slabsEnabled) {
 		GameRegistry.addRecipe(new ItemStack(block, 1, 1),
-				"Q", "Q",
-				'Q', slab);
-		addStairsAndSlabs(block, 0, stairs, slab);
+                "Q", "Q",
+                'Q', slab);
+
+            addSlabs(block, 0,slab);
+        }
+        if(ConfigHandler.stairsEnabled){
+            addStairs(block, 0,stairs);
+        }
 
 		if(req != null) {
 			if(req == Items.coal)

@@ -27,10 +27,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.profiler.Profiler;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.StatCollector;
+import net.minecraft.util.*;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
 
@@ -42,6 +39,7 @@ import vazkii.botania.api.lexicon.ILexicon;
 import vazkii.botania.api.lexicon.ILexiconable;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.mana.ICreativeManaProvider;
+import vazkii.botania.api.mana.IManaBlock;
 import vazkii.botania.api.mana.IManaItem;
 import vazkii.botania.api.mana.IManaUsingItem;
 import vazkii.botania.api.recipe.RecipeManaInfusion;
@@ -405,6 +403,9 @@ public final class HUDHandler {
 		y += 10;
 
 		renderManaBar(x, y, color, mana < 0 ? 0.5F : 1F, mana, maxMana);
+        if(ConfigHandler.minMaxEnabled) {
+            mc.fontRenderer.drawStringWithShadow(String.valueOf(mana)+ " Mana",  x+10, y+28, color);
+        }
 
 		if(mana < 0) {
 			String text = StatCollector.translateToLocal("botaniamisc.statusUnknown");

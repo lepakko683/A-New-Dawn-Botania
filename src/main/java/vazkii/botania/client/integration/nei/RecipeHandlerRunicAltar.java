@@ -2,6 +2,7 @@ package vazkii.botania.client.integration.nei;
 
 import java.util.List;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
 import vazkii.botania.api.BotaniaAPI;
@@ -11,6 +12,7 @@ import vazkii.botania.client.core.handler.HUDHandler;
 import vazkii.botania.common.block.ModBlocks;
 import vazkii.botania.common.block.tile.mana.TilePool;
 import codechicken.nei.PositionedStack;
+import vazkii.botania.common.core.handler.ConfigHandler;
 
 public class RecipeHandlerRunicAltar extends RecipeHandlerPetalApothecary {
 
@@ -42,6 +44,10 @@ public class RecipeHandlerRunicAltar extends RecipeHandlerPetalApothecary {
 	public void drawBackground(int recipe) {
 		super.drawBackground(recipe);
 		HUDHandler.renderManaBar(32, 113, 0x0000FF, 0.75F, ((CachedRunicAltarRecipe) arecipes.get(recipe)).manaUsage, TilePool.MAX_MANA / 10);
+        Minecraft mc = Minecraft.getMinecraft();
+        if(ConfigHandler.minMaxEnabled) {
+            mc.fontRenderer.drawString(String.valueOf(((CachedRunicAltarRecipe) arecipes.get(recipe)).manaUsage) + " Mana Required", 32, 120, 0x3434D3);
+        }
 	}
 
 	@Override

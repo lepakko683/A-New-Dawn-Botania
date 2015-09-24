@@ -82,9 +82,10 @@ public final class ConfigHandler {
 	public static int potionIDAllure = 95;
 	public static int potionIDClear = 96;
 
-    public static boolean stairsEnabled = true;
-    public static boolean slabsEnabled = true;
-    public static boolean wallsEnabled = true;
+    public static boolean stairsEnabled = false;
+    public static boolean slabsEnabled = false;
+    public static boolean wallsEnabled = false;
+    public static boolean minMaxEnabled = true;
 
     public static void loadConfig(File configFile) {
 		config = new Configuration(configFile);
@@ -223,6 +224,9 @@ public final class ConfigHandler {
 
         desc = "Set this to false to disable all walls";
         wallsEnabled = loadPropBool("walls.enabled", desc, wallsEnabled);
+
+        desc = "Set this to true to enable min/max mode(Showing of mana numbers in gui/wand rightclick)";
+        minMaxEnabled = loadPropBool("minmax.enabled", desc, minMaxEnabled);
 
 		potionIDSoulCross = loadPropPotionId(LibPotionNames.SOUL_CROSS, potionIDSoulCross);
 		potionIDFeatherfeet = loadPropPotionId(LibPotionNames.FEATHER_FEET, potionIDFeatherfeet);

@@ -1015,7 +1015,7 @@ public final class LexiconData {
 		starfield.setLexiconPages(new PageText("0"), new PageCraftingRecipe("1", ModCraftingRecipes.recipeStarfield));
 
 		dirtPath = new BLexiconEntry(LibLexicon.MISC_DIRT_PATH, categoryMisc);
-		dirtPath.setLexiconPages(new PageText("0"), new PageCraftingRecipe("1", ModCraftingRecipes.recipeDirtPath), new PageCraftingRecipe("2", ModCraftingRecipes.recipeDirtPathSlab));
+		dirtPath.setLexiconPages(new PageText("0"), new PageCraftingRecipe("1", ModCraftingRecipes.recipeDirtPath));
 
 		mushrooms = new BLexiconEntry(LibLexicon.MISC_MUSHROOMS, categoryMisc);
 		mushrooms.setLexiconPages(new PageText("0"), new PageCraftingRecipe("1", ModCraftingRecipes.recipesMushrooms));
