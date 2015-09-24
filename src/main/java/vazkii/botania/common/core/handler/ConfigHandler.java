@@ -82,10 +82,10 @@ public final class ConfigHandler {
 	public static int potionIDAllure = 95;
 	public static int potionIDClear = 96;
 
-    public static boolean stairsEnabled = false;
-    public static boolean slabsEnabled = false;
-    public static boolean wallsEnabled = false;
-    public static boolean minMaxEnabled = true;
+    public static boolean stairsEnabled = true;
+    public static boolean slabsEnabled = true;
+    public static boolean wallsEnabled = true;
+    public static boolean minMaxEnabled = false;
 
     public static void loadConfig(File configFile) {
 		config = new Configuration(configFile);
