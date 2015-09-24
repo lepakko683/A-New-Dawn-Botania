@@ -16,6 +16,7 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import vazkii.botania.api.mana.IManaItem;
+import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.core.helper.ItemNBTHelper;
 import vazkii.botania.common.item.ItemKeepIvy;
 import vazkii.botania.common.item.ItemRegenIvy;
@@ -38,10 +39,12 @@ public final class TooltipHandler {
 			event.toolTip.add(StatCollector.translateToLocal("botaniamisc.hasKeepIvy"));
         Item item = event.itemStack.getItem();
         if(item instanceof IManaItem){
-            IManaItem manaitem = (IManaItem)item;
-            event.toolTip.add(EnumChatFormatting.AQUA+String.format("%,d / %,d",
-                    manaitem.getMana(event.itemStack),
-                    manaitem.getMaxMana(event.itemStack)));
+            if(ConfigHandler.minMaxEnabled) {
+                IManaItem manaitem = (IManaItem) item;
+                event.toolTip.add(EnumChatFormatting.AQUA + String.format("%,d / %,d",
+                        manaitem.getMana(event.itemStack),
+                        manaitem.getMaxMana(event.itemStack)));
+            }
         }
 	}
 
