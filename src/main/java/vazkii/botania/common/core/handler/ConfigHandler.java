@@ -90,6 +90,7 @@ public final class ConfigHandler {
     public static int endoflameFuelCap = -1;
     public static int thermalilyCooldown = 0;
     public static int hydroangeaCooldown = 0;
+    public static boolean gaiaMusicEnabled = true;
 
     public static void loadConfig(File configFile) {
 		config = new Configuration(configFile);
@@ -244,6 +245,8 @@ public final class ConfigHandler {
         desc = "Change the value of this to set the cooldown in ticks for the thermalily, leave at 0 to disable";
         hydroangeaCooldown = loadPropInt("hydroangea.cooldown", desc, hydroangeaCooldown);
 
+        desc = "Set this to false to disable Guardian of Gaia boss fight music";
+        gaiaMusicEnabled = loadPropBool("gaiamusic.enabled", desc, gaiaMusicEnabled);
 
         potionIDSoulCross = loadPropPotionId(LibPotionNames.SOUL_CROSS, potionIDSoulCross);
 		potionIDFeatherfeet = loadPropPotionId(LibPotionNames.FEATHER_FEET, potionIDFeatherfeet);

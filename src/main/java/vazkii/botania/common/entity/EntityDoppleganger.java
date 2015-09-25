@@ -424,7 +424,7 @@ public class EntityDoppleganger extends EntityCreature implements IBotaniaBossWi
 		float range = 32F;
 		List<EntityPlayer> players = worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(source.posX + 0.5 - range, source.posY + 0.5 - range, source.posZ + 0.5 - range, source.posX + 0.5 + range, source.posY + 0.5 + range, source.posZ + 0.5 + range));
 		
-		if(worldObj.isRemote && !isPlayingMusic && !isDead && !players.isEmpty()) {
+		if(worldObj.isRemote && !isPlayingMusic && !isDead && !players.isEmpty() && ConfigHandler.gaiaMusicEnabled) {
 			Botania.proxy.playRecordClientSided(worldObj, source.posX, source.posY, source.posZ, (ItemRecord) (hard ? ModItems.recordGaia2 : ModItems.recordGaia1));
 			isPlayingMusic = true;
 		}
