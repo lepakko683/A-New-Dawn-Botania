@@ -323,6 +323,7 @@ warning.enable=Enable In Game Warning
 endoflame.fuelcap=Endoflame Max Fuel Burn Time
 thermalily.cooldown=Thermalily Cooldown
 hydroangea.cooldown=Hydroangea Cooldown
+gaiamusic.enabled=Enable Guardian of Gaia Battle Music
 
 # VERSION CHECKING
 botania.versioning.flavour0=NANI SORE!? BOTANIA IS OUTDATED!?
