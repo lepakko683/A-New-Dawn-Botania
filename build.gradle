@@ -44,6 +44,14 @@ minecraft {
     replaceIn 'LibMisc.java' //I may have missed another file, though I can only find it in here.
 }
 
+//This here is for FTP
+repositories {
+    mavenCentral()
+}
+configurations {
+    ftpAntTask
+}
+//End of the FTP config
 dependencies {
     compile files(
             'Baubles-deobf.jar'
