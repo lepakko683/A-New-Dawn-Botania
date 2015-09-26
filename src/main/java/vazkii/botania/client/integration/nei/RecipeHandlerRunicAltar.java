@@ -46,7 +46,7 @@ public class RecipeHandlerRunicAltar extends RecipeHandlerPetalApothecary {
 		HUDHandler.renderManaBar(32, 113, 0x0000FF, 0.75F, ((CachedRunicAltarRecipe) arecipes.get(recipe)).manaUsage, TilePool.MAX_MANA / 10);
         Minecraft mc = Minecraft.getMinecraft();
         if(ConfigHandler.minMaxEnabled) {
-            mc.fontRenderer.drawString(String.valueOf(((CachedRunicAltarRecipe) arecipes.get(recipe)).manaUsage) + " Mana Required", 32, 120, 0x3434D3);
+            mc.fontRenderer.drawString(String.valueOf(((CachedRunicAltarRecipe) arecipes.get(recipe)).manaUsage) + StatCollector.translateToLocal("botania.nei.minmaxrecipe") + ": ", 32, 120, 0x3434D3);
         }
 	}
 

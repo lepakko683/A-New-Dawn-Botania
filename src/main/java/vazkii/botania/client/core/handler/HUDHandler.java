@@ -410,7 +410,7 @@ public final class HUDHandler {
 
 		renderManaBar(x, y, color, mana < 0 ? 0.5F : 1F, mana, maxMana);
         if(ConfigHandler.minMaxEnabled) {
-            mc.fontRenderer.drawStringWithShadow(String.valueOf(mana)+ " Mana",  x+10, y+28, color);
+            mc.fontRenderer.drawStringWithShadow(String.valueOf(mana)+ " " + StatCollector.translateToLocal("botania.minmaxmana"),  x+10, y+28, color);
         }
 
 		if(mana < 0) {

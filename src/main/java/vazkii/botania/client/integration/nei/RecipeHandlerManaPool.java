@@ -120,7 +120,7 @@ public class RecipeHandlerManaPool extends TemplateRecipeHandler {
 		RenderTilePool.forceMana = true;
         Minecraft mc = Minecraft.getMinecraft();
         if(ConfigHandler.minMaxEnabled) {
-            mc.fontRenderer.drawString(String.valueOf(((CachedManaPoolRecipe) arecipes.get(recipe)).mana) + " Mana Required", 32, 90, 0x3434D3);
+            mc.fontRenderer.drawString(String.valueOf(((CachedManaPoolRecipe) arecipes.get(recipe)).mana) + StatCollector.translateToLocal("botania.nei.minmaxrecipe") + ": ", 32, 90, 0x3434D3);
         }
 	}
 
