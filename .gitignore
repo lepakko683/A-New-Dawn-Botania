@@ -31,3 +31,4 @@ Thumbs.db
 *.jar
 !/gradle/wrapper/gradle-wrapper.jar
 !GardenOfGlass.jar
+!Baubles-deobf.jar
