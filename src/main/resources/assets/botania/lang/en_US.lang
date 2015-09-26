@@ -324,6 +324,11 @@ endoflame.fuelcap=Endoflame Max Fuel Burn Time
 thermalily.cooldown=Thermalily Cooldown
 hydroangea.cooldown=Hydroangea Cooldown
 gaiamusic.enabled=Enable Guardian of Gaia Battle Music
+flugeltiaranerf.enabled=Disable Flugel Tiara Infinite Flight
+flugeltiara.cost=Flugel Tiara Mana Cost
+flugeltiara.maxflytime=Flugel Tiara Max Fly Time
+
+
 
 # VERSION CHECKING
 botania.versioning.flavour0=NANI SORE!? BOTANIA IS OUTDATED!?

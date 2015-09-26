@@ -73,10 +73,16 @@ public final class HUDHandler {
 		Profiler profiler = mc.mcProfiler;
 
 		if(event.type == ElementType.HEALTH) {
-			profiler.startSection("botania-hud");
-			ItemStack amulet = PlayerHandler.getPlayerBaubles(mc.thePlayer).getStackInSlot(0);
-			profiler.endSection();
-		}
+            profiler.startSection("botania-hud");
+            ItemStack amulet = PlayerHandler.getPlayerBaubles(mc.thePlayer).getStackInSlot(0);
+            profiler.endSection();
+
+            if (amulet != null && amulet.getItem() == ModItems.flightTiara) {
+                profiler.startSection("flugelTiara");
+                ItemFlightTiara.renderHUD(event.resolution, mc.thePlayer, amulet);
+                profiler.endSection();
+            }
+        }
 	}
 
 	@SubscribeEvent
