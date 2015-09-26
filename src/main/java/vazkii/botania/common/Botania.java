@@ -71,7 +71,7 @@ public class Botania {
 
 		proxy.preInit(event);
 
-        logger.info("THIS INSTANCE OF MINECRAFT IS USING A FORK OF BOTANIA NOT SANCTIONED BY VAZKII, REPORT ALL CRASHES AT http://bit.ly/1KTavgM");
+        logger.info("THIS INSTANCE OF MINECRAFT IS USING A FORK OF BOTANIA NOT SANCTIONED BY VAZKII, REPORT ALL CRASHES AT http://bit.ly/1KXdQeZ");
 	}
 	@EventHandler
 	public void init(FMLInitializationEvent event) {

@@ -245,7 +245,7 @@ public final class ConfigHandler {
         desc = "Change the value of this to set the cooldown in ticks for the thermalily, leave at 0 to disable";
         thermalilyCooldown = loadPropInt("thermalily.cooldown", desc, thermalilyCooldown);
 
-        desc = "Change the value of this to set the cooldown in ticks for the thermalily, leave at 0 to disable";
+        desc = "Change the value of this to set the cooldown in ticks for the hydroangea, leave at 0 to disable";
         hydroangeaCooldown = loadPropInt("hydroangea.cooldown", desc, hydroangeaCooldown);
 
         desc = "Set this to false to disable Guardian of Gaia boss fight music";

@@ -7,6 +7,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
 /**
@@ -16,7 +17,7 @@ public class PlayerWarningHandler {
 
     @SubscribeEvent
     public void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event) {
-        String msg=" THIS INSTANCE OF MINECRAFT IS USING A FORK OF BOTANIA NOT SANCTIONED BY VAZKII, REPORT ALL CRASHES AT http://bit.ly/1KTavgM";
+        String msg= " " + StatCollector.translateToLocal("botania.ingamewarning");
 
         String[] tmp =  msg.split(" ");
         String formatted = "";

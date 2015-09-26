@@ -17,13 +17,13 @@ public class CrashBotania implements ICrashCallable
     @Override
     public String getLabel ()
     {
-        return "Botania";
+        return "A-New-Dawn-Botania";
     }
 
     @Override
     public String call () throws Exception
     {
-        String str = "THIS INSTANCE OF MINECRAFT IS USING A FORK OF BOTANIA NOT SANCTIONED BY VAZKII, REPORT ALL CRASHES AT http://bit.ly/1KTavgM";
+        String str = "THIS INSTANCE OF MINECRAFT IS USING A FORK OF BOTANIA NOT SANCTIONED BY VAZKII, REPORT ALL CRASHES AT http://bit.ly/1KXdQeZ";
         return str;
     }
 
