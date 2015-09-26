@@ -87,7 +87,7 @@ processResources {
 /**
  * These, go outside of the processResources {}* Though, this was added with the NEI intergation commit (8bf4680)
  */
-task deobfJar(type: Jar, dependsOn: 'incrementBuildNumber') {
+task deobfJar(type: Jar) {
     from(sourceSets.main.output)
 	archiveName = "${baseName} ${version}-deobf.${extension}"
 }
