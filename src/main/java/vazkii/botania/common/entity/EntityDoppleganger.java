@@ -76,6 +76,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class EntityDoppleganger extends EntityCreature implements IBotaniaBossWithShader {
 
 	public static final int SPAWN_TICKS = 100;
+	private static final float RANGE = 12F;
+	private static final float MAX_HP = 800F;
 
 	public static final int MOB_SPAWN_START_TICKS = 20;
 	public static final int MOB_SPAWN_END_TICKS = 80;
@@ -83,8 +85,6 @@ public class EntityDoppleganger extends EntityCreature implements IBotaniaBossWi
 	public static final int MOB_SPAWN_TICKS = MOB_SPAWN_BASE_TICKS + MOB_SPAWN_START_TICKS + MOB_SPAWN_END_TICKS;
 	public static final int MOB_SPAWN_WAVES = 10;
 	public static final int MOB_SPAWN_WAVE_TIME = MOB_SPAWN_BASE_TICKS / MOB_SPAWN_WAVES;
-
-	private static final float MAX_HP = 300F;
 
 	private static final String TAG_INVUL_TIME = "invulTime";
 	private static final String TAG_AGGRO = "aggro";

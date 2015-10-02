@@ -84,6 +84,7 @@ public final class BotaniaCreativeTab extends CreativeTabs {
 		addItem(ModItems.openBucket);
 		addItem(ModItems.rainbowRod);
 		addBlock(ModBlocks.bifrostPerm);
+		addBlock(ModFluffBlocks.bifrostPane);
 		addItem(ModItems.tornadoRod);
 		addItem(ModItems.fireRod);
 		addItem(ModItems.smeltRod);
@@ -111,6 +112,7 @@ public final class BotaniaCreativeTab extends CreativeTabs {
 		addItem(ModItems.spawnerMover);
 		addBlock(ModBlocks.spawnerClaw);
 		addBlock(ModBlocks.cocoon);
+		addBlock(ModBlocks.teruTeruBozu);
 		addItem(ModItems.slimeBottle);
 		addItem(ModItems.blackHoleTalisman);
 
@@ -152,8 +154,10 @@ public final class BotaniaCreativeTab extends CreativeTabs {
 
 		addBlock(ModBlocks.dreamwood);
 		addBlock(ModBlocks.manaGlass);
+		addBlock(ModFluffBlocks.managlassPane);
 		addBlock(ModBlocks.elfGlass);
-
+		addBlock(ModFluffBlocks.alfglassPane);
+		
 		addItem(ModItems.glassPick);
 		addItem(ModItems.manasteelPick);
 		addItem(ModItems.manasteelShovel);
@@ -270,6 +274,7 @@ public final class BotaniaCreativeTab extends CreativeTabs {
 		addBlock(ModBlocks.corporeaIndex);
 		addBlock(ModBlocks.corporeaFunnel);
 		addBlock(ModBlocks.corporeaInterceptor);
+		addBlock(ModBlocks.corporeaRetainer);
 		addBlock(ModBlocks.corporeaCrystalCube);
 		addBlock(ModBlocks.lightRelay);
 		addBlock(ModBlocks.lightLauncher);
@@ -382,9 +387,9 @@ public final class BotaniaCreativeTab extends CreativeTabs {
 		addBlock(ModFluffBlocks.biomeStoneWall);
 		
 		addBlock(ModFluffBlocks.pavement);
-		for(int i = 0; i < 4; i++)
+		for(int i = 0; i < ModFluffBlocks.pavementStairs.length; i++)
 			addBlock(ModFluffBlocks.pavementStairs[i]);
-		for(int i = 0; i < 4; i++)
+		for(int i = 0; i < ModFluffBlocks.pavementSlabs.length; i++)
 			addBlock(ModFluffBlocks.pavementSlabs[i]);
 
 		if(ConfigHandler.enderStuff19Enabled) {

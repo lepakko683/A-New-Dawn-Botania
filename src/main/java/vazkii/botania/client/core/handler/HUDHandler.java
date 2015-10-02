@@ -48,6 +48,7 @@ import vazkii.botania.api.wiki.IWikiProvider;
 import vazkii.botania.api.wiki.WikiHooks;
 import vazkii.botania.client.core.helper.RenderHelper;
 import vazkii.botania.client.lib.LibResources;
+import vazkii.botania.common.Botania;
 import vazkii.botania.common.block.ModBlocks;
 import vazkii.botania.common.block.tile.corporea.TileCorporeaCrystalCube;
 import vazkii.botania.common.block.tile.corporea.TileCorporeaIndex;
@@ -57,6 +58,7 @@ import vazkii.botania.common.item.ItemCraftingHalo;
 import vazkii.botania.common.item.ItemTwigWand;
 import vazkii.botania.common.item.ModItems;
 import vazkii.botania.common.item.equipment.bauble.ItemFlightTiara;
+import vazkii.botania.common.item.equipment.bauble.ItemMonocle;
 import vazkii.botania.common.lib.LibObfuscation;
 import baubles.common.lib.PlayerHandler;
 import cpw.mods.fml.common.eventhandler.EventPriority;
@@ -142,6 +144,12 @@ public final class HUDHandler {
 				ItemFlugelEye.renderHUD(event.resolution, mc.thePlayer, equippedStack);
 				profiler.endSection();
 			}*/
+			
+			if(Botania.proxy.isClientPlayerWearingMonocle()) {
+				profiler.startSection("monocle");
+				ItemMonocle.renderHUD(event.resolution, mc.thePlayer);
+				profiler.endSection();
+			}
 
 			profiler.startSection("manaBar");
 			EntityPlayer player = mc.thePlayer;

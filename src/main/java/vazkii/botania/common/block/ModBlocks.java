@@ -24,6 +24,7 @@ import vazkii.botania.common.block.corporea.BlockCorporeaCrystalCube;
 import vazkii.botania.common.block.corporea.BlockCorporeaFunnel;
 import vazkii.botania.common.block.corporea.BlockCorporeaIndex;
 import vazkii.botania.common.block.corporea.BlockCorporeaInterceptor;
+import vazkii.botania.common.block.corporea.BlockCorporeaRetainer;
 import vazkii.botania.common.block.decor.BlockBlaze;
 import vazkii.botania.common.block.decor.BlockBuriedPetals;
 import vazkii.botania.common.block.decor.BlockCustomBrick;
@@ -71,6 +72,7 @@ import vazkii.botania.common.block.string.BlockRedStringDispenser;
 import vazkii.botania.common.block.string.BlockRedStringFertilizer;
 import vazkii.botania.common.block.string.BlockRedStringInterceptor;
 import vazkii.botania.common.block.string.BlockRedStringRelay;
+import vazkii.botania.common.block.subtile.SubTileDecor;
 import vazkii.botania.common.block.subtile.SubTileManastar;
 import vazkii.botania.common.block.subtile.SubTilePureDaisy;
 import vazkii.botania.common.block.subtile.functional.SubTileAgricarnation;
@@ -140,12 +142,14 @@ import vazkii.botania.common.block.tile.TileSpawnerClaw;
 import vazkii.botania.common.block.tile.TileSpecialFlower;
 import vazkii.botania.common.block.tile.TileStarfield;
 import vazkii.botania.common.block.tile.TileTerraPlate;
+import vazkii.botania.common.block.tile.TileTeruTeruBozu;
 import vazkii.botania.common.block.tile.TileTinyPlanet;
 import vazkii.botania.common.block.tile.TileTinyPotato;
 import vazkii.botania.common.block.tile.corporea.TileCorporeaCrystalCube;
 import vazkii.botania.common.block.tile.corporea.TileCorporeaFunnel;
 import vazkii.botania.common.block.tile.corporea.TileCorporeaIndex;
 import vazkii.botania.common.block.tile.corporea.TileCorporeaInterceptor;
+import vazkii.botania.common.block.tile.corporea.TileCorporeaRetainer;
 import vazkii.botania.common.block.tile.mana.TileBellows;
 import vazkii.botania.common.block.tile.mana.TileDistributor;
 import vazkii.botania.common.block.tile.mana.TileManaDetector;
@@ -255,6 +259,8 @@ public final class ModBlocks {
 	public static Block cellBlock;
 	public static Block redStringInterceptor;
 	public static Block gaiaHead;
+	public static Block corporeaRetainer;
+	public static Block teruTeruBozu;
 
 	public static void init() {
 		flower = new BlockModFlower();
@@ -341,18 +347,19 @@ public final class ModBlocks {
 		cellBlock = new BlockCell();
 		redStringInterceptor = new BlockRedStringInterceptor();
 		gaiaHead = new BlockGaiaHead();
-		
-            ModFluffBlocks.init();
-        if(ConfigHandler.stairsEnabled){
-            ModFluffBlocks.initStairs();
-        }
-        if(ConfigHandler.slabsEnabled){
-            ModFluffBlocks.initSlabs();
-        }
-        if(ConfigHandler.wallsEnabled){
-            ModFluffBlocks.initWalls();
-        }
+		corporeaRetainer = new BlockCorporeaRetainer();
+		teruTeruBozu = new BlockTeruTeruBozu();
 
+		ModFluffBlocks.init();
+		if(ConfigHandler.stairsEnabled){
+			ModFluffBlocks.initStairs();
+		}
+		if(ConfigHandler.slabsEnabled){
+			ModFluffBlocks.initSlabs();
+		}
+		if(ConfigHandler.wallsEnabled){
+			ModFluffBlocks.initWalls();
+		}
 
 		for(int i = 0; i < 16; i++)
 			OreDictionary.registerOre(LibOreDict.FLOWER[i], new ItemStack(flower, 1, i));
@@ -450,15 +457,17 @@ public final class ModBlocks {
 		registerTile(TileCell.class, LibBlockNames.CELL_BLOCK);
 		registerTile(TileRedStringInterceptor.class, LibBlockNames.RED_STRING_INTERCEPTOR);
 		registerTile(TileGaiaHead.class, LibBlockNames.GAIA_HEAD);
+		registerTile(TileCorporeaRetainer.class, LibBlockNames.CORPOREA_RETAINER);
+		registerTile(TileTeruTeruBozu.class, LibBlockNames.TERU_TERU_BOZU);
 
 		BotaniaAPI.registerSubTile(LibBlockNames.SUBTILE_PUREDAISY, SubTilePureDaisy.class);
 		BotaniaAPI.registerSubTile(LibBlockNames.SUBTILE_MANASTAR, SubTileManastar.class);
 
-		BotaniaAPI.registerSubTile(LibBlockNames.SUBTILE_DAYBLOOM, SubTileDaybloom.class);
+		registerSubTileWithDecor(LibBlockNames.SUBTILE_DAYBLOOM, SubTileDaybloom.class, SubTileDecor.Daybloom.class);
 		BotaniaAPI.registerSubTile(LibBlockNames.SUBTILE_ENDOFLAME, SubTileEndoflame.class);
-		BotaniaAPI.registerSubTile(LibBlockNames.SUBTILE_HYDROANGEAS, SubTileHydroangeas.class);
+		registerSubTileWithDecor(LibBlockNames.SUBTILE_HYDROANGEAS, SubTileHydroangeas.class, SubTileDecor.Hydroangeas.class);
 		BotaniaAPI.registerSubTile(LibBlockNames.SUBTILE_THERMALILY, SubTileThermalily.class);
-		BotaniaAPI.registerSubTile(LibBlockNames.SUBTILE_NIGHTSHADE, SubTileNightshade.class);
+		registerSubTileWithDecor(LibBlockNames.SUBTILE_NIGHTSHADE, SubTileNightshade.class, SubTileDecor.Nightshade.class);
 		BotaniaAPI.registerSubTile(LibBlockNames.SUBTILE_ARCANE_ROSE, SubTileArcaneRose.class);
 		BotaniaAPI.registerSubTile(LibBlockNames.SUBTILE_MUNCHDEW, SubTileMunchdew.class);
 		BotaniaAPI.registerSubTile(LibBlockNames.SUBTILE_ENTROPINNYUM, SubTileEntropinnyum.class);
@@ -510,6 +519,11 @@ public final class ModBlocks {
 		for(Class innerClazz : clazz.getDeclaredClasses())
 			if(innerClazz.getSimpleName().equals("Mini"))
 				BotaniaAPI.registerMiniSubTile(key + "Chibi", innerClazz, key);
+	}
+
+	private static void registerSubTileWithDecor(String key, Class<? extends SubTileEntity> clazz, Class<? extends SubTileEntity> decor) {
+		BotaniaAPI.registerSubTile(key, clazz);
+		BotaniaAPI.registerMiniSubTile(key + "Decor", decor, key);
 	}
 
 	private static void registerTile(Class<? extends TileEntity> clazz, String key) {

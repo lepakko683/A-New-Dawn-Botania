@@ -75,6 +75,7 @@ import vazkii.botania.client.render.block.RenderPylon;
 import vazkii.botania.client.render.block.RenderSpawnerClaw;
 import vazkii.botania.client.render.block.RenderSpecialFlower;
 import vazkii.botania.client.render.block.RenderSpreader;
+import vazkii.botania.client.render.block.RenderTeruTeruBozu;
 import vazkii.botania.client.render.block.RenderTinyPotato;
 import vazkii.botania.client.render.entity.RenderBabylonWeapon;
 import vazkii.botania.client.render.entity.RenderCorporeaSpark;
@@ -114,6 +115,7 @@ import vazkii.botania.client.render.tile.RenderTileSpawnerClaw;
 import vazkii.botania.client.render.tile.RenderTileSpreader;
 import vazkii.botania.client.render.tile.RenderTileStarfield;
 import vazkii.botania.client.render.tile.RenderTileTerraPlate;
+import vazkii.botania.client.render.tile.RenderTileTeruTeruBozu;
 import vazkii.botania.client.render.tile.RenderTileTinyPotato;
 import vazkii.botania.common.block.ModBlocks;
 import vazkii.botania.common.block.tile.TileAlfPortal;
@@ -133,6 +135,7 @@ import vazkii.botania.common.block.tile.TileSparkChanger;
 import vazkii.botania.common.block.tile.TileSpawnerClaw;
 import vazkii.botania.common.block.tile.TileStarfield;
 import vazkii.botania.common.block.tile.TileTerraPlate;
+import vazkii.botania.common.block.tile.TileTeruTeruBozu;
 import vazkii.botania.common.block.tile.TileTinyPotato;
 import vazkii.botania.common.block.tile.corporea.TileCorporeaCrystalCube;
 import vazkii.botania.common.block.tile.corporea.TileCorporeaIndex;
@@ -157,6 +160,7 @@ import vazkii.botania.common.entity.EntitySpark;
 import vazkii.botania.common.entity.EntityThornChakram;
 import vazkii.botania.common.entity.EntityVineBall;
 import vazkii.botania.common.item.ModItems;
+import vazkii.botania.common.item.equipment.bauble.ItemMonocle;
 import vazkii.botania.common.lib.LibObfuscation;
 import baubles.common.container.InventoryBaubles;
 import baubles.common.lib.PlayerHandler;
@@ -240,6 +244,7 @@ public class ClientProxy extends CommonProxy {
 		LibRenderIDs.idCocoon = RenderingRegistry.getNextAvailableRenderId();
 		LibRenderIDs.idLightRelay = RenderingRegistry.getNextAvailableRenderId();
 		LibRenderIDs.idBellows = RenderingRegistry.getNextAvailableRenderId();
+		LibRenderIDs.idTeruTeruBozu = RenderingRegistry.getNextAvailableRenderId();
 
 		RenderSpecialFlower specialFlowerRender = new RenderSpecialFlower(LibRenderIDs.idSpecialFlower);
 		RenderingRegistry.registerBlockHandler(new RenderAltar());
@@ -259,6 +264,7 @@ public class ClientProxy extends CommonProxy {
 		RenderingRegistry.registerBlockHandler(new RenderHourglass());
 		RenderingRegistry.registerBlockHandler(new RenderCocoon());
 		RenderingRegistry.registerBlockHandler(new RenderBellows());
+		RenderingRegistry.registerBlockHandler(new RenderTeruTeruBozu());
 
 		IMultiblockRenderHook.renderHooks.put(ModBlocks.flower, specialFlowerRender);
 		IMultiblockRenderHook.renderHooks.put(ModBlocks.shinyFlower, specialFlowerRender);
@@ -304,6 +310,7 @@ public class ClientProxy extends CommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileLightRelay.class, new RenderTileLightRelay());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileBellows.class, new RenderTileBellows());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileGaiaHead.class, new RenderTileSkullOverride());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileTeruTeruBozu.class, new RenderTileTeruTeruBozu());
 
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySkull.class, new RenderTileSkullOverride());
 
@@ -345,10 +352,7 @@ public class ClientProxy extends CommonProxy {
 
 	@Override
 	public boolean isClientPlayerWearingMonocle() {
-		EntityPlayer player = Minecraft.getMinecraft().thePlayer;
-		InventoryBaubles inv = PlayerHandler.getPlayerBaubles(player);
-		ItemStack stack = inv.getStackInSlot(0);
-		return stack != null && stack.getItem() instanceof IBurstViewerBauble;
+		return ItemMonocle.hasMonocle(Minecraft.getMinecraft().thePlayer);
 	}
 
 	@Override

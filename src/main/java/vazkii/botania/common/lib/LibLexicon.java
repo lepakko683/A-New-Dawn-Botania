@@ -127,6 +127,7 @@ public final class LibLexicon {
 	public static final String DEVICE_CANOPY_DRUM = "canopyDrum";
 	public static final String DEVICE_COCOON = "cocoon";
 	public static final String DEVICE_MANA_BOMB = "manaBomb";
+	public static final String DEVICE_TERU_TERU_BOZU = "teruTeruBozu";
 
 	public static final String TOOL_MANA_BLASTER = "manaBlaster";
 	public static final String TOOL_GRASS_SEEDS = "grassSeeds";
@@ -191,6 +192,7 @@ public final class LibLexicon {
 	public static final String ENDER_LUMINIZER_TRANSPORT = "luminizerTransport";
 	public static final String ENDER_STAR_SWORD = "starSword";
 	public static final String ENDER_THUNDER_SWORD = "thunderSword";
+	public static final String ENDER_CORPOREA_RETAINER = "corporeaRetainer";
 
 	public static final String BAUBLE_INTRO = "bIntro";
 	public static final String BAUBLE_COSMETIC = "cosmeticBaubles";

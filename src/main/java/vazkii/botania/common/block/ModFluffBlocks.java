@@ -15,6 +15,9 @@ import vazkii.botania.common.block.decor.Block18Stone;
 import vazkii.botania.common.block.decor.BlockPavement;
 import vazkii.botania.common.block.decor.biomestone.BlockBiomeStoneA;
 import vazkii.botania.common.block.decor.biomestone.BlockBiomeStoneB;
+import vazkii.botania.common.block.decor.panes.BlockAlfglassPane;
+import vazkii.botania.common.block.decor.panes.BlockBifrostPane;
+import vazkii.botania.common.block.decor.panes.BlockManaglassPane;
 import vazkii.botania.common.block.decor.quartz.BlockSpecialQuartz;
 import vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzSlab;
 import vazkii.botania.common.block.decor.quartz.BlockSpecialQuartzStairs;
@@ -173,9 +176,9 @@ public final class ModFluffBlocks {
 	public static Block[] stoneFullSlabs = new Block[8];
 	public static Block stoneWall;
 
-	public static Block[] pavementStairs = new Block[4];
-	public static Block[] pavementSlabs = new Block[4];
-	public static Block[] pavementFullSlabs = new Block[4];
+	public static Block[] pavementStairs = new Block[BlockPavement.TYPES];
+	public static Block[] pavementSlabs = new Block[BlockPavement.TYPES];
+	public static Block[] pavementFullSlabs = new Block[BlockPavement.TYPES];
 	
 	public static Block endStoneSlab;
 	public static Block endStoneSlabFull;
@@ -183,6 +186,10 @@ public final class ModFluffBlocks {
 	public static Block enderBrickSlab;
 	public static Block enderBrickSlabFull;
 	public static Block enderBrickStairs;
+	
+	public static Block managlassPane;
+	public static Block alfglassPane;
+	public static Block bifrostPane;
 
 	public static void init() {
 
@@ -264,6 +271,85 @@ public final class ModFluffBlocks {
                 ((BlockModSlab) pavementFullSlabs[i]).register();
             }
         }
+=======
+		managlassPane = new BlockManaglassPane();
+		alfglassPane = new BlockAlfglassPane();
+		bifrostPane = new BlockBifrostPane();
+		
+		if(ConfigHandler.darkQuartzEnabled) {
+			((BlockModSlab) darkQuartzSlab).register();
+			((BlockModSlab) darkQuartzSlabFull).register();
+		}
+		((BlockModSlab) manaQuartzSlab).register();
+		((BlockModSlab) manaQuartzSlabFull).register();
+		((BlockModSlab) blazeQuartzSlab).register();
+		((BlockModSlab) blazeQuartzSlabFull).register();
+		((BlockModSlab) lavenderQuartzSlab).register();
+		((BlockModSlab) lavenderQuartzSlabFull).register();
+		((BlockModSlab) redQuartzSlab).register();
+		((BlockModSlab) redQuartzSlabFull).register();
+		((BlockModSlab) elfQuartzSlab).register();
+		((BlockModSlab) elfQuartzSlabFull).register();
+		((BlockModSlab) sunnyQuartzSlab).register();
+		((BlockModSlab) sunnyQuartzSlabFull).register();
+
+		((BlockModSlab) livingwoodSlab).register();
+		((BlockModSlab) livingwoodSlabFull).register();
+		((BlockModSlab) livingwoodPlankSlab).register();
+		((BlockModSlab) livingwoodPlankSlabFull).register();
+		((BlockModSlab) livingrockSlab).register();
+		((BlockModSlab) livingrockSlabFull).register();
+		((BlockModSlab) livingrockBrickSlab).register();
+		((BlockModSlab) livingrockBrickSlabFull).register();
+		((BlockModSlab) dreamwoodSlab).register();
+		((BlockModSlab) dreamwoodSlabFull).register();
+		((BlockModSlab) dreamwoodPlankSlab).register();
+		((BlockModSlab) dreamwoodPlankSlabFull).register();
+
+		((BlockModSlab) reedSlab).register();
+		((BlockModSlab) reedSlabFull).register();
+		((BlockModSlab) thatchSlab).register();
+		((BlockModSlab) thatchSlabFull).register();
+
+		((BlockModSlab) prismarineSlab).register();
+		((BlockModSlab) prismarineSlabFull).register();
+		((BlockModSlab) prismarineBrickSlab).register();
+		((BlockModSlab) prismarineBrickSlabFull).register();
+		((BlockModSlab) darkPrismarineSlab).register();
+		((BlockModSlab) darkPrismarineSlabFull).register();
+
+		((BlockModSlab) netherBrickSlab).register();
+		((BlockModSlab) netherBrickSlabFull).register();
+		((BlockModSlab) soulBrickSlab).register();
+		((BlockModSlab) soulBrickSlabFull).register();
+		((BlockModSlab) snowBrickSlab).register();
+		((BlockModSlab) snowBrickSlabFull).register();
+		((BlockModSlab) tileSlab).register();
+		((BlockModSlab) tileSlabFull).register();
+
+		((BlockModSlab) dirtPathSlab).register();
+		((BlockModSlab) dirtPathSlabFull).register();
+
+		((BlockModSlab) endStoneSlab).register();
+		((BlockModSlab) endStoneSlabFull).register();
+		((BlockModSlab) enderBrickSlab).register();
+		((BlockModSlab) enderBrickSlabFull).register();
+
+		for(int i = 0; i < 24; i++) {
+			((BlockModSlab) biomeStoneSlabs[i]).register();
+			((BlockModSlab) biomeStoneFullSlabs[i]).register();
+		}
+
+		for(int i = 0; i < 8; i++) {
+			((BlockModSlab) stoneSlabs[i]).register();
+			((BlockModSlab) stoneFullSlabs[i]).register();
+		}
+		
+		for(int i = 0; i < pavementSlabs.length; i++) {
+			((BlockModSlab) pavementSlabs[i]).register();
+			((BlockModSlab) pavementFullSlabs[i]).register();
+		}
+>>>>>>> 32a98341e5e64514dcea454d464b5a3505dd951b
 	}
 
     public static void initStairs(){

@@ -1128,10 +1128,14 @@ tile.botania:pavement0.name=White Portuguese Pavement
 tile.botania:pavement1.name=Black Portuguese Pavement
 tile.botania:pavement2.name=Blue Portuguese Pavement
 tile.botania:pavement3.name=Red Portuguese Pavement
+tile.botania:pavement4.name=Yellow Portuguese Pavement
+tile.botania:pavement5.name=Green Portuguese Pavement
 tile.botania:pavement0Stairs.name=White Portuguese Pavement Stairs
 tile.botania:pavement1Stairs.name=Black Portuguese Pavement Stairs
 tile.botania:pavement2Stairs.name=Blue Portuguese Pavement Stairs
 tile.botania:pavement3Stairs.name=Red Portuguese Pavement Stairs
+tile.botania:pavement4Stairs.name=Yellow Portuguese Pavement Stairs
+tile.botania:pavement5Stairs.name=Green Portuguese Pavement Stairs
 tile.botania:pavement0Slab.name=White Portuguese Pavement Slab
 tile.botania:pavement0SlabFull.name=White Portuguese Pavement Slab
 tile.botania:pavement1Slab.name=Black Portuguese Pavement Slab
@@ -1140,8 +1144,17 @@ tile.botania:pavement2Slab.name=Blue Portuguese Pavement Slab
 tile.botania:pavement2SlabFull.name=Blue Portuguese Pavement Slab
 tile.botania:pavement3Slab.name=Red Portuguese Pavement Slab
 tile.botania:pavement3SlabFull.name=Red Portuguese Pavement Slab
+tile.botania:pavement4Slab.name=Yellow Portuguese Pavement Slab
+tile.botania:pavement4SlabFull.name=Yellow Portuguese Pavement Slab
+tile.botania:pavement5Slab.name=Green Portuguese Pavement Slab
+tile.botania:pavement5SlabFull.name=Green Portuguese Pavement Slab
 tile.botania:cellBlock.name=Cellular Block
 tile.botania:gaiaHeadBlock.name=Gaia Guardian's Head
+tile.botania:corporeaRetainer.name=Corporea Retainer
+tile.botania:manaGlassPane.name=Managlass Pane
+tile.botania:elfGlassPane.name=Alfglass Pane
+tile.botania:bifrostPermPane.name=Bifrost Pane
+tile.botania:teruTeruBozu.name=Teru Teru Bozu
 
 # FLOWER NAMES
 tile.botania:flower..name=Botania Flower
@@ -1157,14 +1170,20 @@ tile.botania:flower.manastar.reference=Wish upon a star
 # - GENERATING
 tile.botania:flower.daybloom.name=Daybloom
 tile.botania:flower.daybloom.reference=A Sting of light
+tile.botania:flower.daybloomDecor.name=Daybloom Motif
+tile.botania:flower.daybloomDecor.reference=A Sting of light
 tile.botania:flower.endoflame.name=Endoflame
 tile.botania:flower.endoflame.reference=Squirting Lag
 tile.botania:flower.hydroangeas.name=Hydroangeas
 tile.botania:flower.hydroangeas.reference=Just friendly crustaceans
+tile.botania:flower.hydroangeasDecor.name=Hydroangeas Motif
+tile.botania:flower.hydroangeasDecor.reference=Just friendly crustaceans
 tile.botania:flower.thermalily.name=Thermalily
 tile.botania:flower.thermalily.reference=A Scarlet Rose indeed
 tile.botania:flower.nightshade.name=Nightshade
 tile.botania:flower.nightshade.reference=Ghastly signature
+tile.botania:flower.nightshadeDecor.name=Nightshade Motif
+tile.botania:flower.nightshadeDecor.reference=Ghastly signature
 tile.botania:flower.arcanerose.name=Rosa Arcana
 tile.botania:flower.arcanerose.reference=Ten blue orbs in the corner
 tile.botania:flower.munchdew.name=Munchdew
@@ -2205,7 +2224,7 @@ botania.page.fIntro4=&1Redstone Root&0 for Redstone Control
 
 # -- FLOWER SHRINKING
 botania.entry.flowerShrinking=Flower Shrinking
-botania.page.flowerShrinking0=Some functional flowers have a bit too much reach. Sometimes one might not want that to be the case. Tossing one of those few flowers into a &1Mana Pool&0 with an &1Alchemy Catalyst&0 will, at the cost of some &4Mana&0, shrink it, making its radius smaller. Every other function remains the same.
+botania.page.flowerShrinking0=Some functional flowers have a bit too much reach. Sometimes one might not want that to be the case. Tossing one of those few flowers into a &1Mana Pool&0 with an &1Alchemy Catalyst&0 will, at the cost of some &4Mana&0, shrink it, making its radius smaller. Every other function remains the same.<br>This can also be done for passive generating flowers, turning them into decorative versions that don't decay.
 botania.page.flowerShrinking1=Like a nendoroid
 
 # -- JADED AMARANTHUS
@@ -2350,6 +2369,11 @@ botania.page.gIntro0=&4Generating Mana&0 should be at the top of the priorities 
 botania.page.gIntro1=All &4Generating Flowers&0, alike the &4Functional Flowers&0 contain a small buffer of &4Mana&0.<br>Standard rules for &4Mana&0 reading apply, right clicking with a &1Wand of the Forest&0 will update the mana readings.<br>This mana will be stored in the closest &1Mana Spreader&0 around.
 botania.page.gIntro2=It is important to keep in mind that these flowers memorize the &1Mana Spreader&0 into which they should put &4Mana&0 into. They'll only store into the nearest spreader present at the time of the flower being placed (or the closest placed afterward, if none was present), and none other. It can be bound to another spreader with a wand in &4Bind Mode&0.
 
+# -- CAVEATS OF PASSIVE GENERATION
+botania.entry.passiveGen=Caveats of Passive Generation
+botania.page.passiveGen0=The spectrum of &4Generating Flowers&0 can be arranged in two groups, &4Passive&0 and &4Active&0.<br>&4Passive Flowers&0 are those that simply create &4Mana&0 using a completely free resource, such as the sun, or water. &4Active Flowers&0 require some sort of resource to transform into &4Mana&0, be it renewable or not.
+botania.page.passiveGen1=At the start of a botanist's career, only very basic and rudimentary &4Passive Flowers&0 are available, such as the &1Daybloom&0 or &1Nightshade&0.<br>These flowers are required to advance on to more potent and effective &4Active Flowers&0, but they should not be relied upon aside from being a stepping stone, as all &4Passive Flowers&0 will decay into a &1Dead Bush&0 after three days of work. 
+
 # -- DAYBLOOM
 botania.entry.daybloom=Daybloom
 botania.page.daybloom0=The &1Daybloom&0 is the most basic and rudimentary &4Generating Flower&0. Simply put, it performs a modified photosynthesis process, in order to transform sunlight into &4Mana&0.<br>The process is rather slow, about ten or a dozen of these should get the job done, for now.
@@ -2436,7 +2460,7 @@ botania.page.dandelifeon3=Every step of the game, the following transitions migh
 botania.page.dandelifeon4=All of the transitions happen at the same time.<br>Aside from those, a few aditional rules not present in a typical simulation of &4Conway's Game of Life&0 are also present in the &1Dadelifeon&0 procedures, listed in the following pages.
 botania.page.dandelifeon5=All cells have an age, starting at zero. Whenever a cell lives on, by having two or three neighbours, its age inreases by one. Whenever a dead cell becomes a live cell, the age of the new live cell is equal to the age of the oldest neighbour, plus one. Any cells older than sixty generations will die during the next step.
 botania.page.dandelifeon6=Second off, the 3x3 zone centered around the &1Dandelifeon&0 itself is not habitable by cells. Any live cells that would exist in that area are turned into &4Mana&0 instead. The older the cell that would be created, the more &4Mana&0 it makes. Age zero cells produce no &4Mana&0.
-botania.page.dandelifeon10=The 5x5 zone centered around the &1Dandelifeon&0, excluding the 3x3 zone mentioned in the previous page can also not be habited by Age zero cells.<br>A few other restrictions apply to cells, having two different &1Dandelifeon&0 flowers affect the same cell will kill it. Lastly, any cell will die if moved by any other means than the &1Dandelifeon&0 itself.
+botania.page.dandelifeon10=The 7x7 zone centered around the &1Dandelifeon&0, excluding the 3x3 zone mentioned in the previous page can also not be habited by Age zero cells.<br>A few other restrictions apply to cells, having two different &1Dandelifeon&0 flowers affect the same cell will kill it. Lastly, any cell will die if moved by any other means than the &1Dandelifeon&0 itself.
 botania.page.dandelifeon7=&1Cellular Blocks&0 are crafted with &1Cactus&0, &1Carrots&0 and &1Potatoes&0, and are extremely fragile, they may not be picked once placed down or moved by &1Pistons&0 and may not be created (through having 3 live neighbours on a dead cell) on any block that isn't air.<br>If not within the range of a &1Dandelifeon&0 they work as normal building blocks.
 botania.page.dandelifeon8=&oCellCraft^2&r.
 botania.page.dandelifeon9=Creating &1Cellular Blocks&0
@@ -2651,6 +2675,11 @@ botania.entry.manaBomb=Manastorm Charge
 botania.page.manaBomb0=Putting together some &1TNT&0 and a &1Gaia Spirit&0 creates a &1Manastorm Charge&0, a type of explosive, per say. Ignited with a &1Mana Burst&0, the charge will create an unstable &1Manastorm Epicenter&0, which will, over time, spawn supercharged &1Mana Bursts&0, that explode on contact with other blocks.<br>Needless to say, only a maniac would unleash such a force near anything they care about.
 botania.page.manaBomb1=Prepare to face the mighty...
 
+# -- TERU TERU BOZU
+botania.entry.teruTeruBozu=Teru Teru Bozu
+botania.page.teruTeruBozu0=&1Teru Teru Bozu&0 are known as amulets that can ward away bad weather. Simply creating one of these and placing it in the world will decrease the amount of time that &1Rain&0 or &1Snowstorms&0 will last for. During bad weather, right clicking one with a &1Sunflower&0 or tossing said flower at it will have sun come back. Attaching a &1Redstone Comparator&0 to one of these allows for it to detect bad weather.
+botania.page.teruTeruBozu1=Too spoopy
+
 # - MYSTICAL INSTRUMENTS
 # -- MANA BLASTER
 botania.entry.manaBlaster=Mana Blaster
@@ -2864,7 +2893,8 @@ botania.page.fireChakram1=As fire as fenn's mixtape
 
 # -- OVERGROWTH SEED
 botania.entry.overgrowthSeed=Overgrowth Seed
-botania.page.overgrowthSeed0=An &1Overgrowth Seed&0 is an elusive item, which can be used to enchant a piece of &1Grass&0, via right clicking on it in the world, creating &1Enchanted Soil&0. Flowers that are rooted on this &1Enchanted Soil&0 will function at double the normal speed.<br>There's one problem, though. No known method of creating these exists, but they have been spotted in ancient structures and the like.
+botania.page.overgrowthSeed0=An &1Overgrowth Seed&0 is an elusive item, which can be used to enchant a piece of &1Grass&0, via right clicking on it in the world, creating &1Enchanted Soil&0. Flowers that are rooted on this &1Enchanted Soil&0 will function at double the normal speed.<br>&4Passive flowers&0 planted on this soil won't get the speed boost, instead, they will simply not decay.
+botania.page.overgrowthSeed1=There's one problem, though.<br>No known method of creating these exists. They have however, been allegedly spotted by historians in ancient structures and temples. Perhaps that would be a wise guess as to where to find these.
 
 # -- LIVINGWOOD BOW
 botania.entry.livingwoodBow=Livingwood Bow
@@ -2900,13 +2930,13 @@ botania.page.slimeBottle1=JUMPYDOLL
 botania.entry.exchangeRod=Rod of the Shifting Crust
 botania.page.exchangeRod0=&1Rod of the Shifting Crust&0 is a magical device with the ability to swap blocks in the world at very fast speeds. In order to achieve this, one must first select a block to swap with, this is done by shift-right clicking that block in the world.<br>After this block is selected, left clicking any other block in the world will swap it for that block, assuming it's present in the user's inventory.
 botania.page.exchangeRod1=Right clicking on a block in the world will start a larger transformation, which will swap all highlighted blocks into the one selected. Obviously, these blocks do come from the user's inventory as well. Only proper, full size blocks can be used for this swap, so no flowers, torches or other shenenigans of the sort. Using this power does, naturally, require &4Mana&0 from the user's inventory.
-botania.page.exchangeRod2=Other rods or devices can be used to extend the power of the &1Rod of the Shifting Crust&0.<br>For example, having a &1Rod of the Lands&0 in one's inventory provides the &1Rod of the Shifting Crust&0 with an endless supply of &1Dirt&0, assuming the &4Mana&0 cost for the &1Rod of the Lands&0' dirt conjuration is fulfiled.
+botania.page.exchangeRod2=Other rods or devices can be used to extend the power of the &1Rod of the Shifting Crust&0.<br>For example, having a &1Rod of the Lands&0 in one's inventory provides the &1Rod of the Shifting Crust&0 with an endless supply of &1Dirt&0, assuming the &4Mana&0 cost for the &1Rod of the Lands&0' dirt conjuration is fulfilled.
 botania.page.exchangeRod3=Bootlegged equal trade
 
 # -- MANAWEAVE CLOTH
 botania.entry.manaweave=Manaweave Cloth
 botania.page.manaweave0=&1Manaweave Cloth&0 is a type of fabric with powerful ties to the primal energies contained in &4Mana&0.<br>Armor can be made of this cloth, &1Manaweave Robes&0, while they aren't very strong when it comes to raw resistance and strength, the robes make up for it with a powerful set bonus, making tools and rods cheaper to use, &4Mana&0 wise, and making the latter more powerful. 
-botania.page.manaweave1=Wearing the full set of &1Manaweave Robes&0 grants the wearer with increased proficiency when operating magical rods, increasing the power or range of them, or just their cost, for some of the more simpleton ones.<br>&1Manaweave Robes&0 can use &4Mana&0 from one's inventory to repair themselves, similarly to &1Manasteel Armor&0, but, due to their affinities with the primal energies, at a lower mana cost.
+botania.page.manaweave1=Wearing the full set of &1Manaweave Robes&0 grants the wearer with increased proficiency when operating magical rods, increasing the power/range of them, or just their cost, for some of the more simpleton ones.<br>&1Manaweave Robes&0 can use &4Mana&0 from one's inventory to repair themselves, similarly to &1Manasteel Armor&0, but, due to their affinities with the primal energies, at a lower mana cost.
 botania.page.manaweave2=Weaving the threads of mana
 botania.page.manaweave3=Creating the Cowl
 botania.page.manaweave4=Creating the Robe Top
@@ -3021,7 +3051,15 @@ botania.page.corporeaInterceptor2=So many automation prospects
 botania.entry.corporeaCrystalCube=Corporea Crystal Cube
 botania.page.corporeaCrystalCube0=A seer usually looks through a crystal ball to see the future. Well, a corporea handler would look through a crystal cube to see the present. The &1Corporea Crystal Cube&0 acts as a visual medium to interact ith one's &4Corporea Network&0. Placing the block down and giving it a &1Corporea Spark&0 is the obvious first step to hooking it up to the network. 
 botania.page.corporeaCrystalCube1=When the block is connected, right clicking it with any sort of item will have it monitor that item, allowing someone who's looking at it see how many exist in the network. The display updates about once every second.<br>While there's an item selected, left clicking the block will request one of that item from the network. Shift-left clicking requests a whole stack.
+botania.page.corporeaCrystalCube3=The &1Corporea Crystal Cube&0 can be used alongside a &1Redstone Comparator&0. This will output the amount of items of the type it's looking for in the system. The output value follows a logarithmic progression, or on layman's terms, every level requires twice as many of the item as the previous one, starting at 1. 0 items would be signal 0. 1 item for 1, 2 items for 2, 4 items for 3, 8 items for 4, 16 items for 5 and so on up to 15.
 botania.page.corporeaCrystalCube2=I can see forever
+
+# -- CORPOREA RETAINER
+botania.entry.corporeaRetainer=Corporea Retainer
+botania.page.corporeaRetainer0=The &1Corporea Retainer&0 is an addon of sorts to the &1Corporea Interceptor&0. Placing one of these adjacent to an interceptor allows for the interceptor to pass along to it the original corporea request, if it's intercepted.<br>When this happens, the retainer remembers which corporea object in the network initiated the request as well as the contents of said request.
+botania.page.corporeaRetainer1=Once the &1Corporea Retainer&0 receives a redstone signal after it's been informed of a request, it'll have the original requestor redo the exact same request. For example, a funnel might request &1Wooden Planks&0 from the network. An interceptor intercepts the request and passes a signal along to craft the planks. The retainer then gets a signal, allowing for the original funnel to redo the request and get its planks.
+botania.page.corporeaRetainer2=As the &1Corporea Retainer&0 acts as an addon to the interceptor, it can use it to interact with the network, thus not needing a spark itself.<br>The retainer can only hold on to one request at a time, and will not accept another until the last one is fulfilled. A &1Redstone Comparator&0 can read if there's a request to be done or not.
+botania.page.corporeaRetainer3=The nemesis of a goldfish
 
 # -- DECORATIVE END BLOCKS
 botania.entry.endStoneDecor=Decorative End Blocks
@@ -3219,6 +3257,7 @@ botania.page.judgementCloaks3=Taste Vengeance!
 # -- MANASEER MONOCLE
 botania.entry.monocle=Manaseer Monocle
 botania.page.monocle0=A handy accessory for one who requires a thorough window into where their &4Mana Bursts&0 are going is the &1Manaseer Monocle&0. Not only is it a rather fancy eyepiece but it also allows the wearer to see all nearby &4Mana Bursts&0, even if their line of sight towards them is blocked by something. More important, perhaps, is that when someone wearing this monocle looks at a flower they'll be able to see its functional radius.
+botania.page.monocle2=As an added bonus, looking at redstone pieces with the &1Manaseer Monocle&0 worn will show info about them, expediting the process of creating redstonic contraptions.<br>The monocle can be used as a &4Cosmetic Override&0 to any other bauble. While in this state, all of its benefits are still provided, which allows for it to be used without taking up a slot.
 botania.page.monocle1=Why hello there old chap
 
 # -- RING OF CORRECTION
@@ -3269,7 +3308,8 @@ botania.page.gaiaRitual0=The &4Ritual of Gaia&0 is a procedure often enacted by 
 botania.page.gaiaRitual1=Creating &1Gaia Pylons&0
 botania.page.gaiaRitual2=Ritual of Gaia
 botania.page.gaiaRitual3=To start the ritual, simply shift-right click the &1Beacon&0 block with a &1Terrasteel Ingot&0, take a step back and prepare to fight for your life. Good preparation is required, as the fight with the &4Guardian of Gaia&0 can be even harder than that of the &4Wither&0. Upon defeating the &4Guardian&0, one can collect their prize, a handful of &1Spirits of Gaia&0.
-botania.page.gaiaRitual4=The common attire for this ritual is a set of Enchanted &1Elementium Armor&0, a &1Terra Blade&0 and a large assortment of &4Brews&0 and &4Baubles&0.<br>The effect of the &1Beacon&0 is nullified during the battle, so that should be taken in mind. Lastly, staying away from the purple might be a good idea. 
+botania.page.gaiaRitual4=The common attire for this ritual is a set of Enchanted &1Elementium Armor&0, a &1Terra Blade&0 and a large assortment of &4Brews&0 and &4Baubles&0. The effect of the &1Beacon&0 is nullified during the battle, so that should be taken in mind.<br>The &1Guardian&0 has a massive health pool, so preparation in the form of &4Enchantments&0 and &4Brews&0 is a must!
+botania.page.gaiaRitual5=The difficulty and rewards bestowed by the ritual depend on the amount of people participating. Executing the ritual with over five people might be a recipe for disaster due to the chaos created, so collaborative rituals of that scale shouldn't be attempted.<br>Lastly, staying away from the purple might be a good idea.
 
 # -- RITUAL OF GAIA II
 botania.entry.gaiaRitualHardmode=Ritual of Gaia II
@@ -3455,7 +3495,7 @@ botania.page.cacophonium2=For maximum cacophony, the &1Cacophonium&0 can be shif
 
 # -- PORTUGUESE PAVEMENT
 botania.entry.pavement=Portuguese Pavement
-botania.page.pavement0=&1Portuguese Pavement&0 is a type of building block designed to be used to create detailed roads. It comes in four colors, white, black, blue and red, all four of these can be turned into slabs and stairs.<br>For those with experience in the arts of multiparts and microblocks, these blocks provide a great looking method to create patterns.
+botania.page.pavement0=&1Portuguese Pavement&0 is a type of building block designed to be used to create detailed roads. It comes in various colors, all of which can be turned into slabs and stairs.<br>For those with experience in the arts of multiparts and microblocks, these blocks provide a great looking method to create patterns.
 botania.page.pavement1=These aren't slippery
 
 # -- THAUMCRAFT INTEGRATION
