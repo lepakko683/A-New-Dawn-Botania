@@ -2,10 +2,10 @@
  * This class was created by <Vazkii>. It's distributed as
  * part of the Botania Mod. Get the Source Code in github:
  * https://github.com/Vazkii/Botania
- * 
+ *
  * Botania is Open Source and distributed under the
  * Botania License: http://botaniamod.net/license.php
- * 
+ *
  * File Created @ [Jan 24, 2015, 2:35:08 PM (GMT)]
  */
 package vazkii.botania.common.block;
@@ -179,14 +179,14 @@ public final class ModFluffBlocks {
 	public static Block[] pavementStairs = new Block[BlockPavement.TYPES];
 	public static Block[] pavementSlabs = new Block[BlockPavement.TYPES];
 	public static Block[] pavementFullSlabs = new Block[BlockPavement.TYPES];
-	
+
 	public static Block endStoneSlab;
 	public static Block endStoneSlabFull;
 	public static Block endStoneStairs;
 	public static Block enderBrickSlab;
 	public static Block enderBrickSlabFull;
 	public static Block enderBrickStairs;
-	
+
 	public static Block managlassPane;
 	public static Block alfglassPane;
 	public static Block bifrostPane;
@@ -204,7 +204,7 @@ public final class ModFluffBlocks {
 		biomeStoneB = new BlockBiomeStoneB();
 		stone = new Block18Stone();
 		pavement = new BlockPavement();
-		
+
 		if(ConfigHandler.darkQuartzEnabled) {
 			darkQuartz = new BlockSpecialQuartz(LibBlockNames.QUARTZ_DARK);
             if(ConfigHandler.slabsEnabled){
@@ -271,11 +271,11 @@ public final class ModFluffBlocks {
                 ((BlockModSlab) pavementFullSlabs[i]).register();
             }
         }
-=======
+
 		managlassPane = new BlockManaglassPane();
 		alfglassPane = new BlockAlfglassPane();
 		bifrostPane = new BlockBifrostPane();
-		
+
 		if(ConfigHandler.darkQuartzEnabled) {
 			((BlockModSlab) darkQuartzSlab).register();
 			((BlockModSlab) darkQuartzSlabFull).register();
@@ -344,12 +344,11 @@ public final class ModFluffBlocks {
 			((BlockModSlab) stoneSlabs[i]).register();
 			((BlockModSlab) stoneFullSlabs[i]).register();
 		}
-		
+
 		for(int i = 0; i < pavementSlabs.length; i++) {
 			((BlockModSlab) pavementSlabs[i]).register();
 			((BlockModSlab) pavementFullSlabs[i]).register();
 		}
->>>>>>> 32a98341e5e64514dcea454d464b5a3505dd951b
 	}
 
     public static void initStairs(){
