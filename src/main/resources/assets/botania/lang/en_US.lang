@@ -1155,6 +1155,14 @@ tile.botania:manaGlassPane.name=Managlass Pane
 tile.botania:elfGlassPane.name=Alfglass Pane
 tile.botania:bifrostPermPane.name=Bifrost Pane
 tile.botania:teruTeruBozu.name=Teru Teru Bozu
+tile.botania:shimmerrock.name=Shimmerrock
+tile.botania:shimmerrock0Slab.name=Shimmerrock Slab
+tile.botania:shimmerrock0SlabFull.name=Shimmerrock Slab
+tile.botania:shimmerrock0Stairs.name=Shimmerrock Stairs
+tile.botania:shimmerwoodPlanks.name=Shimmerwood Planks
+tile.botania:shimmerwoodPlanks0Slab.name=Shimmerwood Plank Slab
+tile.botania:shimmerwoodPlanks0SlabFull.name=Shimmerwood Plank Slab
+tile.botania:shimmerwoodPlanks0Stairs.name=Shimmerwood Plank Stairs
 
 # FLOWER NAMES
 tile.botania:flower..name=Botania Flower
@@ -1200,6 +1208,8 @@ tile.botania:flower.spectrolus.name=Spectrolus
 tile.botania:flower.spectrolus.reference=Profiting off Hate
 tile.botania:flower.dandelifeon.name=Dandelifeon
 tile.botania:flower.dandelifeon.reference=C'est la vie
+tile.botania:flower.rafflowsia.name=Rafflowsia
+tile.botania:flower.rafflowsia.reference=Trap Hole Nightmare
 
 # - FUNCTIONAL
 tile.botania:flower.bellethorn.name=Bellethorne
@@ -2042,7 +2052,7 @@ botania.page.wrap0=It seems like the creator of this mod decided to add a weird 
 botania.entry.mIntro=An Introduction to Mana
 botania.page.mIntro0=&4Mana&0 is an ethereal substance. In layman's terms, it is a form of &4mystical energy&0. Its sensorial existence is inconstant, and its color depends on the environment its put in.<br>Mastering &4Mana&0 is one of the most important skills a botanist needs to master.
 botania.page.mIntro1=In order to create &4Mana&0, one would require a set of &4Generating Flowers&0 (read the respective section). This &4Mana&0 can be dispersed by utilizing &1Mana Spreaders&0 and stored in &1Mana Pools&0. &4Mana&0 can be used for a myriad of different things. For starters, it can be used for &4Functional Flowers&0 (read the respective section).
-botania.page.mIntro2=To get started with mastering the art of &4Mana&0, one would start by learning how to use &1Dayblooms&0, &1Mana Spreaders&0 and &1Mana Pools&0.<br>These form a basic infrastructure for mana, which can be used for all sorts of purposes. Have a read at the &4Functional Flora&0 and &4Magical Apparatus&0 sections of this Lexicon. 
+botania.page.mIntro2=To get started with mastering the art of &4Mana&0, one would start by learning how to use &1Dayblooms&0, &1Mana Spreaders&0 and &1Mana Pools&0.<br>These form a basic infrastructure for mana, which can be used for all sorts of purposes. Have a read at the &4Functional Flora&0 and &4Natural Apparatus&0 sections of this Lexicon. 
 
 # -- MANA SPREADER
 botania.entry.spreader=Mana Spreader
@@ -2393,7 +2403,7 @@ botania.page.nightshade1=&oThe shadow of the day&r.
 # -- ENDOFLAME
 botania.entry.endoflame=Endoflame
 botania.page.endoflame0=While the &1Daybloom&0 is all well and good, a botanist requires more effective means of generating &4Mana&0.<br>The &1Endoflame&0 does that exactly, it will absorb any combustible items or blocks dropped on the nearby vicinity (albeit only one at a time) and burn through them to passively generate mana while the fuel lasts.
-botania.page.endoflame1=There is a small caveat though, the &1Endoflame&0 will not burn anything that returns a byproduct, an example are &1Lava Buckets&0, that have empty &1Buckets&0 as a byproduct.<br>Due to their behaviour, an &1Open Crate&0, which you read about on the &4Magical Apparatus&0 section, might be a good step on getting it to be self-sustainable.
+botania.page.endoflame1=There is a small caveat though, the &1Endoflame&0 will not burn anything that returns a byproduct, an example are &1Lava Buckets&0, that have empty &1Buckets&0 as a byproduct.<br>Due to their behaviour, an &1Open Crate&0, which you read about on the &4Natural Apparatus&0 section, might be a good step on getting it to be self-sustainable.
 botania.page.endoflame2=&oNot nitor&r.
 
 # -- HYDROANGEAS
@@ -2451,8 +2461,17 @@ botania.page.spectrolus0=The &1Spectrolus&0 is a flower that's particularly fond
 botania.page.spectrolus1=While it consumes all &1Wool&0 around, it'll only create any mana if its of the color it wants, so haphazardly tossing &1Wool&0 at it is a wasteful strategy.<br>The color it'll absorb properly next can be seen by hovering over the flower with a &1Wand of the Forest&0.
 botania.page.spectrolus2=&oTaste the Rainbow&r.
 
+# -- RAFFLOWSIA
+botania.entry.rafflowsia=Rafflowsia
+botania.page.rafflowsia0=Once upon a time, the peasants of the nation found joy in planting enormous fields of &1Dayblooms&0, &1Nightshades&0 and &1Hydroangeas&0. The lowly citizens relished in the free intake of &4Mana&0 provenient of the various elements.<br>They were happy with their ignorance.
+botania.page.rafflowsia1=One day, however, the plebians woke up to their prized gardens withered away, all of their hard work turned into &1Dead Bushes&0.<br>Revolted at the betrayal of their Gods, the men and women of the nation exclaimed in a single voice: "Passive flowers are useless now!"
+botania.page.rafflowsia2=Or so they believed. Soon enough, ingenious sages of the nobility would find out the recipe for a flower that can make use of these so said, deprecated flowers.<br>This flower was, therefore, dubbed the &1Rafflowsia&0.
+botania.page.rafflowsia3=The &1Rafflowsia&0 functions in a matter similar to the &1Kekimurus&0, with any sort of &4passive flowers&0, as in, it'll find any nearby placed on the floor and destroy them, creating &4Mana&0.<br>However, there are diminishing returns applied to this procedure, for the most effective usage, the same type of flower should not be destroyed multiple times in a row.
+botania.page.rafflowsia4=&oA New Dawn, you could say&r.
+
 # -- DANDELIFEON
 botania.entry.dandelifeon=Dandelifeon
+botania.page.dandelifeon_w=Warning: This feature is experimental.<br>It may, and probably will change in the future. Do not get too attached to it.
 botania.page.dandelifeon0=The &1Dandelifeon&0 is a flower not recommended for those faint of heart.<br>While it's possibly the strongest available generating flower within the botanist's toolbelt, it's also one of the less straightforward to put to work.
 botania.page.dandelifeon1=This flower makes use of a cellular automata known as &4Conway's Game of Life&0. The area for this procedure is a 25x25 square centered around the &1Dandelifeon&0 itself.<br>While the flower has a redstone signal, twice every second it'll step the game once.
 botania.page.dandelifeon2=The game is executed with the concept of &4Cells&0. The 25x25 area can be seen as a grid of 25 by 25 cells<br>Cells may be live or dead, live if the block in that position is a &1Cellular Block&0 (read on) or dead if it's anything else. &4Neighbours&0 are the eight blocks in the same plane around any one cell.
@@ -2460,12 +2479,12 @@ botania.page.dandelifeon3=Every step of the game, the following transitions migh
 botania.page.dandelifeon4=All of the transitions happen at the same time.<br>Aside from those, a few aditional rules not present in a typical simulation of &4Conway's Game of Life&0 are also present in the &1Dadelifeon&0 procedures, listed in the following pages.
 botania.page.dandelifeon5=All cells have an age, starting at zero. Whenever a cell lives on, by having two or three neighbours, its age inreases by one. Whenever a dead cell becomes a live cell, the age of the new live cell is equal to the age of the oldest neighbour, plus one. Any cells older than sixty generations will die during the next step.
 botania.page.dandelifeon6=Second off, the 3x3 zone centered around the &1Dandelifeon&0 itself is not habitable by cells. Any live cells that would exist in that area are turned into &4Mana&0 instead. The older the cell that would be created, the more &4Mana&0 it makes. Age zero cells produce no &4Mana&0.
-botania.page.dandelifeon10=The 7x7 zone centered around the &1Dandelifeon&0, excluding the 3x3 zone mentioned in the previous page can also not be habited by Age zero cells.<br>A few other restrictions apply to cells, having two different &1Dandelifeon&0 flowers affect the same cell will kill it. Lastly, any cell will die if moved by any other means than the &1Dandelifeon&0 itself.
+botania.page.dandelifeon10=Whenever any live cells are absorbed by the 3x3 zone in the center, all other cells in the board die.<br>A few other restrictions apply to cells, such as having two different &1Dandelifeon&0 flowers affect the same cell will kill it. Lastly, any cell will die if moved by any other means than the &1Dandelifeon&0 itself.
 botania.page.dandelifeon7=&1Cellular Blocks&0 are crafted with &1Cactus&0, &1Carrots&0 and &1Potatoes&0, and are extremely fragile, they may not be picked once placed down or moved by &1Pistons&0 and may not be created (through having 3 live neighbours on a dead cell) on any block that isn't air.<br>If not within the range of a &1Dandelifeon&0 they work as normal building blocks.
 botania.page.dandelifeon8=&oCellCraft^2&r.
 botania.page.dandelifeon9=Creating &1Cellular Blocks&0
 
-# - MAGICAL APPARATUS
+# - NATURAL APPARATUS
 # -- MANA PYLON
 botania.entry.pylon=Mana Pylon
 botania.page.pylon0=A &1Mana Pylon&0 is a structure that can pull energies from the earth and use them to power enchanting processes.<br>For one, setting one adjusted to an &1Enchanting Table&0 as if it was a &1Bookshelf&0 will drastically increase the power it can convey, just 2 of these are enough for it to reach &4Level 30&0.
@@ -2785,6 +2804,8 @@ botania.page.rainbowRod0=&4Bifrost&0, the rainbow bridge that reaches between th
 botania.page.rainbowRod1=This bridge extends as far as a hundred blocks, and will vanish after about fifteen seconds.<br>Only one bridge can be created for any given &1Rod of the Bifrost&0 at a time, as soon as the old bridge vanishes, a new one can be created.
 botania.page.rainbowRod2=Going my way!! Cut open a path and go!
 botania.page.rainbowRod3=&1Bifrost Blocks&0 for decoration
+botania.page.rainbowRod4=Rainbow &1Shimmerrock&0
+botania.page.rainbowRod5=Rainbow &1Shimmerwood Planks&0
 
 # -- ROD OF THE SKIES
 botania.entry.tornadoRod=Rod of the Skies

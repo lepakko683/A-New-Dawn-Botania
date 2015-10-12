@@ -293,6 +293,8 @@ public final class ModCraftingRecipes {
 	public static IRecipe recipeManaweaveLegs;
 	public static IRecipe recipeManaweaveBoots;
 	public static IRecipe recipeBifrost;
+	public static IRecipe recipeShimmerrock;
+	public static IRecipe recipeShimmerwoodPlanks;
 	public static IRecipe recipeAutocraftingHalo;
 	public static List<IRecipe> recipesPavement;
 	public static IRecipe recipeCellBlock;
@@ -1984,9 +1986,13 @@ public final class ModCraftingRecipes {
 				'S', LibOreDict.MANAWEAVE_CLOTH);
 		recipeManaweaveBoots = BotaniaAPI.getLatestAddedRecipe();
 
-		// Bifrost Block Recipe
+		// Bifrost Blocks Recipe
 		addShapelessOreDictRecipe(new ItemStack(ModBlocks.bifrostPerm), new ItemStack(ModItems.rainbowRod), new ItemStack(ModBlocks.elfGlass));
 		recipeBifrost = BotaniaAPI.getLatestAddedRecipe();
+		addShapelessOreDictRecipe(new ItemStack(ModBlocks.shimmerrock), LibOreDict.LIVING_ROCK, new ItemStack(ModBlocks.bifrostPerm));
+		recipeShimmerrock = BotaniaAPI.getLatestAddedRecipe();
+		addShapelessOreDictRecipe(new ItemStack(ModBlocks.shimmerwoodPlanks), new ItemStack(ModBlocks.dreamwood, 1, 1), new ItemStack(ModBlocks.bifrostPerm));
+		recipeShimmerwoodPlanks = BotaniaAPI.getLatestAddedRecipe();
 
 		// Manufactory Halo Recipe
 		addShapelessOreDictRecipe(new ItemStack(ModItems.autocraftingHalo), new ItemStack(ModItems.craftingHalo), LibOreDict.MANA_DIAMOND);

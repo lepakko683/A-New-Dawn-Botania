@@ -13,6 +13,7 @@ package vazkii.botania.common.block;
 import net.minecraft.block.Block;
 import vazkii.botania.common.block.decor.Block18Stone;
 import vazkii.botania.common.block.decor.BlockPavement;
+import vazkii.botania.common.block.decor.BlockShimmerrock;
 import vazkii.botania.common.block.decor.biomestone.BlockBiomeStoneA;
 import vazkii.botania.common.block.decor.biomestone.BlockBiomeStoneB;
 import vazkii.botania.common.block.decor.panes.BlockAlfglassPane;
@@ -40,6 +41,8 @@ import vazkii.botania.common.block.decor.slabs.living.BlockLivingrockBrickSlab;
 import vazkii.botania.common.block.decor.slabs.living.BlockLivingrockSlab;
 import vazkii.botania.common.block.decor.slabs.living.BlockLivingwoodPlankSlab;
 import vazkii.botania.common.block.decor.slabs.living.BlockLivingwoodSlab;
+import vazkii.botania.common.block.decor.slabs.living.BlockShimmerrockSlab;
+import vazkii.botania.common.block.decor.slabs.living.BlockShimmerwoodPlankSlab;
 import vazkii.botania.common.block.decor.slabs.prismarine.BlockDarkPrismarineSlab;
 import vazkii.botania.common.block.decor.slabs.prismarine.BlockPrismarineBrickSlab;
 import vazkii.botania.common.block.decor.slabs.prismarine.BlockPrismarineSlab;
@@ -60,6 +63,8 @@ import vazkii.botania.common.block.decor.stairs.living.BlockLivingrockBrickStair
 import vazkii.botania.common.block.decor.stairs.living.BlockLivingrockStairs;
 import vazkii.botania.common.block.decor.stairs.living.BlockLivingwoodPlankStairs;
 import vazkii.botania.common.block.decor.stairs.living.BlockLivingwoodStairs;
+import vazkii.botania.common.block.decor.stairs.living.BlockShimmerrockStairs;
+import vazkii.botania.common.block.decor.stairs.living.BlockShimmerwoodPlankStairs;
 import vazkii.botania.common.block.decor.stairs.prismarine.BlockDarkPrismarineStairs;
 import vazkii.botania.common.block.decor.stairs.prismarine.BlockPrismarineBrickStairs;
 import vazkii.botania.common.block.decor.stairs.prismarine.BlockPrismarineStairs;
@@ -187,6 +192,13 @@ public final class ModFluffBlocks {
 	public static Block enderBrickSlabFull;
 	public static Block enderBrickStairs;
 
+	public static Block shimmerrockSlab;
+	public static Block shimmerrockSlabFull;
+	public static Block shimmerrockStairs;
+	public static Block shimmerwoodPlankSlab;
+	public static Block shimmerwoodPlankSlabFull;
+	public static Block shimmerwoodPlankStairs;
+
 	public static Block managlassPane;
 	public static Block alfglassPane;
 	public static Block bifrostPane;
@@ -301,6 +313,8 @@ public final class ModFluffBlocks {
         sunnyQuartzStairs = new BlockSpecialQuartzStairs(sunnyQuartz);
         endStoneStairs = new BlockEndStoneStairs();
         enderBrickStairs = new BlockEnderBrickStairs();
+        shimmerrockStairs = new BlockShimmerrockStairs();
+        shimmerwoodPlankStairs = new BlockShimmerwoodPlankStairs();
     }
 
     public static void initSlabs() {
@@ -352,6 +366,10 @@ public final class ModFluffBlocks {
         endStoneSlabFull = new BlockEndStoneSlab(true);
         enderBrickSlab = new BlockEnderBrickSlab(false);
         enderBrickSlabFull = new BlockEnderBrickSlab(true);
+        shimmerrockSlab = new BlockShimmerrockSlab(false);
+        shimmerrockSlabFull = new BlockShimmerrockSlab(true);
+        shimmerwoodPlankSlab = new BlockShimmerwoodPlankSlab(false);
+        shimmerwoodPlankSlabFull = new BlockShimmerwoodPlankSlab(true);
 
 
 
@@ -403,6 +421,10 @@ public final class ModFluffBlocks {
         ((BlockModSlab) endStoneSlabFull).register();
         ((BlockModSlab) enderBrickSlab).register();
         ((BlockModSlab) enderBrickSlabFull).register();
+        ((BlockModSlab) shimmerrockSlab).register();
+        ((BlockModSlab) shimmerrockSlabFull).register();
+        ((BlockModSlab) shimmerwoodPlankSlab).register();
+        ((BlockModSlab) shimmerwoodPlankSlabFull).register();
     }
 
     public static void initWalls(){
