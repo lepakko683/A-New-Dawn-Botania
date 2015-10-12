@@ -168,7 +168,7 @@ public class CommonProxy {
 			FMLCommonHandler.instance().exitJava(1, true);
 		}
 	}
-	
+
 	public void serverStarting(FMLServerStartingEvent event) {
 		event.registerServerCommand(new CommandShare());
 		event.registerServerCommand(new CommandOpen());

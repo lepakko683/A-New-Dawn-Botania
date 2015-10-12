@@ -124,6 +124,7 @@ public final class LexiconData {
 	public static LexiconEntry solegnolia;
 
 	public static LexiconEntry generatingIntro;
+	public static LexiconEntry passiveGen;
 	public static LexiconEntry daybloom;
 	public static LexiconEntry nightshade;
 	public static LexiconEntry endoflame;
@@ -531,6 +532,9 @@ public final class LexiconData {
 		generatingIntro = new BLexiconEntry(LibLexicon.GFLOWER_INTRO, categoryGenerationFlowers);
 		generatingIntro.setPriority().setLexiconPages(new PageText("0"), new PageText("1"), new PageText("2"));
 
+		passiveGen = new BLexiconEntry(LibLexicon.GFLOWER_PASSIVE_GENERATION, categoryGenerationFlowers);
+		passiveGen.setPriority().setLexiconPages(new PageText("0"), new PageText("1")).setIcon(new ItemStack(Blocks.deadbush));
+
 		daybloom = new BLexiconEntry(LibLexicon.GFLOWER_DAYBLOOM, categoryGenerationFlowers);
 		daybloom.setPriority().setLexiconPages(new PageText("0"), new PageText(ConfigHandler.hardcorePassiveGeneration > 0 ? "1a" : "1"), new PageImage("3", LibResources.ENTRY_DIMINISHING_RETURNS), new PagePetalRecipe("2", ModPetalRecipes.daybloomRecipe), new PageText("4"), new PageText("5"));
 
@@ -569,7 +573,7 @@ public final class LexiconData {
 
 		dandelifeon = new ALexiconEntry(LibLexicon.GFLOWER_DANDELIFEON, categoryGenerationFlowers);
 		dandelifeon.setLexiconPages(new PageText("0"), new PageText("1"), new PageText("2"), new PageText("3"), new PageText("4"), new PageText("5"), new PageText("6"), new PageText("10"), new PageText("7"), new PagePetalRecipe("8", ModPetalRecipes.dandelifeonRecipe), new PageCraftingRecipe("9", ModCraftingRecipes.recipeCellBlock));
-		
+
 		// DEVICES ENTRIES
 		pylon = new BLexiconEntry(LibLexicon.DEVICE_PYLON, categoryDevices);
 		pylon.setLexiconPages(new PageText("0"), new PageCraftingRecipe("1", ModCraftingRecipes.recipePylon));
@@ -657,7 +661,7 @@ public final class LexiconData {
 
 		teruTeruBozu = new BLexiconEntry(LibLexicon.DEVICE_TERU_TERU_BOZU, categoryDevices);
 		teruTeruBozu.setLexiconPages(new PageText("0"), new PageCraftingRecipe("1", ModCraftingRecipes.recipeTeruTeruBozu));
-		
+
 		// TOOLS ENTRIES
 		manaBlaster = new BLexiconEntry(LibLexicon.TOOL_MANA_BLASTER, categoryTools);
 		manaBlaster.setLexiconPages(new PageText("0"), new PageText("1"), new PageText("2"), new PageCraftingRecipe("3", ModCraftingRecipes.recipeManaBlaster));
@@ -788,7 +792,7 @@ public final class LexiconData {
 
 		autocraftingHalo = new BLexiconEntry(LibLexicon.TOOL_AUTOCRAFTING_HALO, categoryTools);
 		autocraftingHalo.setLexiconPages(new PageText("0"), new PageCraftingRecipe("1", ModCraftingRecipes.recipeAutocraftingHalo));
-		
+
 		// ENDER ENTRIES
 		enderAir = new BLexiconEntry(LibLexicon.ENDER_AIR, categoryEnder);
 		enderAir.setPriority().setLexiconPages(new PageText("0"));
@@ -861,7 +865,7 @@ public final class LexiconData {
 
 		corporeaRetainer = new ALexiconEntry(LibLexicon.ENDER_CORPOREA_RETAINER, categoryEnder);
 		corporeaRetainer.setLexiconPages(new PageText("0"), new PageText("1"), new PageText("2"), new PageCraftingRecipe("3", ModCraftingRecipes.recipeCorporeaRetainer));
-		
+
 		// BAUBLES ENTRIES
 		baublesIntro = new BLexiconEntry(LibLexicon.BAUBLE_INTRO, categoryBaubles);
 		baublesIntro.setPriority().setLexiconPages(new PageText("0"), new PageImage("1", LibResources.ENTRY_BAUBLES), new PageText("2"));
@@ -951,7 +955,7 @@ public final class LexiconData {
 		elvenResources.setPriority().setLexiconPages(new PageText("0"), new PageElvenRecipe("1", ModElvenTradeRecipes.dreamwoodRecipe), new PageText("2"), new PageCraftingRecipe("10", ModCraftingRecipes.recipeDreamwoodTwig), new PageElvenRecipe("3", ModElvenTradeRecipes.elementiumRecipes), new PageElvenRecipe("4", ModElvenTradeRecipes.pixieDustRecipe), new PageElvenRecipe("5", ModElvenTradeRecipes.dragonstoneRecipes), new PageText("6"), new PageElvenRecipe("7", ModElvenTradeRecipes.elvenQuartzRecipe), new PageText("8"), new PageElvenRecipe("9", ModElvenTradeRecipes.alfglassRecipe)).setIcon(new ItemStack(ModItems.manaResource, 1, 9));
 
 		gaiaRitual = new ALexiconEntry(LibLexicon.ALF_GAIA_RITUAL, categoryAlfhomancy);
-		gaiaRitual.setLexiconPages(new PageText("0"), new PageCraftingRecipe("1", ModCraftingRecipes.recipeGaiaPylon), new PageMultiblock("2", ModMultiblocks.gaiaRitual), new PageText("3"), new PageText("4")).setIcon(new ItemStack(ModItems.manaResource, 1, 5));
+		gaiaRitual.setLexiconPages(new PageText("0"), new PageCraftingRecipe("1", ModCraftingRecipes.recipeGaiaPylon), new PageMultiblock("2", ModMultiblocks.gaiaRitual), new PageText("3"), new PageText("4"), new PageText("5")).setIcon(new ItemStack(ModItems.manaResource, 1, 5));
 		LexiconRecipeMappings.map(new ItemStack(ModItems.manaResource, 1, 5), gaiaRitual, 0);
 
 		gaiaRitualHardmode = new ALexiconEntry(LibLexicon.ALF_GAIA_RITUAL_HARDMODE, categoryAlfhomancy);
@@ -1048,7 +1052,7 @@ public final class LexiconData {
 
 		pavement = new BLexiconEntry(LibLexicon.MISC_PAVEMENT, categoryMisc);
 		pavement.setLexiconPages(new PageText("0"), new PageCraftingRecipe("1", ModCraftingRecipes.recipesPavement));
-		
+
 		if(Botania.bcTriggersLoaded) {
 			bcIntegration = new CLexiconEntry(LibLexicon.MISC_BC_INTEGRATION, categoryMisc, "BuildCraft");
 			bcIntegration.setLexiconPages(new PageText("0")).setIcon(new ItemStack(Items.redstone));

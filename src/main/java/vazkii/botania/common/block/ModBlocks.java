@@ -503,7 +503,7 @@ public final class ModBlocks {
 		registerSubTileWithMini(LibBlockNames.SUBTILE_BUBBELL, SubTileBubbell.class);
 		BotaniaAPI.registerSubTile(LibBlockNames.SUBTILE_SOLEGNOLIA, SubTileSolegnolia.class);
 	}
-	
+
 	public static void registerMultiparts() {
 		if(Loader.isModLoaded("ForgeMultipart")) {
 			try {

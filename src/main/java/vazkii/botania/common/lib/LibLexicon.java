@@ -92,6 +92,7 @@ public final class LibLexicon {
 	public static final String FFLOWER_SOLEGNOLIA = "solegnolia";
 
 	public static final String GFLOWER_INTRO = "gIntro";
+    public static final String GFLOWER_PASSIVE_GENERATION = "passiveGen";
 	public static final String GFLOWER_DAYBLOOM = "daybloom";
 	public static final String GFLOWER_NIGHTSHADE = "nightshade";
 	public static final String GFLOWER_ENDOFLAME = "endoflame";
@@ -251,7 +252,7 @@ public final class LibLexicon {
 	public static final String MISC_CHALLENGES = "challenges";
 	public static final String MISC_CACOPHONIUM = "cacophonium";
 	public static final String MISC_PAVEMENT = "pavement";
-	
+
 	public static final String MISC_TC_INTEGRATION = "tcIntegration";
 	public static final String MISC_BC_INTEGRATION = "bcIntegration";
 	public static final String MISC_BANNERS = "banners";
