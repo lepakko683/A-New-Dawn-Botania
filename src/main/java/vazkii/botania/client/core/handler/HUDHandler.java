@@ -81,7 +81,10 @@ public final class HUDHandler {
 
             if (amulet != null && amulet.getItem() == ModItems.flightTiara) {
                 profiler.startSection("flugelTiara");
-                ItemFlightTiara.renderHUD(event.resolution, mc.thePlayer, amulet);
+				if(!ConfigHandler.flugelTiaraNerfEnabled) {
+					ItemFlightTiara.renderHUD(event.resolution, mc.thePlayer, amulet);
+				}
+					
                 profiler.endSection();
             }
         }
